@@ -1,0 +1,617 @@
+body {
+	margin:0px;
+	padding:0px;
+	background:black;
+	font-family:arial;
+}
+
+.IPlayer {
+	width:930px;
+	height:525px;
+}
+
+	.IPlayer input {
+		border:1px solid #6a6a6a;
+		background:#3a3a3a;
+		-webkit-border-radius: 2px;
+		-moz-border-radius: 2px;
+		border-radius: 2px;
+		outline:none;
+		color:#c2c2c2;
+		font-size:11px;
+		padding:2px;
+	}
+
+	.IPlayer .header {
+		height:30px;
+		background: #262626;
+
+	}
+
+		.IPlayer .header .title {
+			float:left;
+			display:inline;
+			width:106px;
+			text-align:center;
+			color:#e9e9e9;
+			padding-top:6px;
+		}
+
+		.IPlayer .header .tabs {
+			float:left;
+			display:inline;
+		}
+
+			.IPlayer .header .tabs ul {
+				margin:0px;
+				padding:0px;
+				list-style-type:none;
+				height:100%;
+			}
+
+			.IPlayer .header .tabs ul li {
+				float:left;
+				display:inline;
+				background:#545656;
+				margin-right:3px;
+				-webkit-border-radius: 4px;
+				-moz-border-radius: 4px;
+				border-radius: 4px;
+				color:white;
+				margin-top:3px;
+				padding:2px 6px;
+				cursor:pointer;
+			}
+
+			.IPlayer .header .tabs ul li:hover,.IPlayer .header .tabs ul li.selected {
+				background:#989898;
+			}
+
+		.IPlayer .header .right-buttons {
+			float:right;
+			color:white;
+		}
+
+			.IPlayer .header .right-buttons .login-status {
+				float:right;
+				margin-right:5px;
+				margin-top:3px;
+				background:#2f3131;
+				color:white;
+				padding:3px 5px;
+			}
+
+			.IPlayer .header .right-buttons .buttons {
+				float:right;
+				display:inline;
+				margin:0px;
+				padding:0px;
+				list-style-type:none;
+				margin-left:5px;
+			}
+
+			
+				.IPlayer .header .right-buttons .buttons li {
+					float:right;
+					padding-top:6px;
+					margin:0px 3px;
+				}
+
+				.IPlayer .header .right-buttons .buttons li span.close {
+					background:url(../images/icons/close.png) no-repeat;
+					display:inline-block;
+					width:13px;
+					height:12px;
+					margin-right:6px;
+
+				}
+
+				.IPlayer .header .right-buttons .buttons li span.settings {
+					background:url(../images/icons/settings.png) no-repeat;
+					display:inline-block;
+					width:11px;
+					height:11px;
+				}
+
+
+	/* WORKSPACE - START */
+
+	.IPlayer .workspace {
+		height:380px;
+	}
+
+
+		.IPlayer .workspace .tab-content {
+			display:none;
+			height:100%;
+		}
+
+		.IPlayer .workspace .general-sep {
+			background:url(../images/workspace/general/seperator.png) right repeat-y;
+		}
+
+		.IPlayer .workspace .general-sep-h {
+			background:url(../images/workspace/general/seperator-horizontal.png) top repeat-x;
+		}
+
+		.IPlayer .workspace .blue-button-add {
+			display:inline-block;
+			width:18px;
+			height:17px;
+			background:url(../images/workspace/general/add.png) no-repeat;
+		}
+
+		.IPlayer .workspace .loader {
+			display:inline-block;
+			width:20px;
+			height:20px;
+			background:url(../images/workspace/general/loader.gif) no-repeat;
+		}
+	
+		.IPlayer .workspace .tab-playlist {
+
+		}
+			
+			.IPlayer .workspace .tab-playlist .playlist {
+				float:left;
+				display:inline;
+				height:100%;
+				width:330px;
+				cursor:default;
+			}
+
+
+
+				.IPlayer .workspace .tab-playlist .playlist .playlist-add {
+					height:30px;
+					padding-top:2px;
+				}
+
+					.IPlayer .workspace .tab-playlist .playlist .playlist-add input {
+						margin-top:3px;
+						margin-left:5px;
+						width:290px;
+						vertical-align:top;
+					}
+
+					.IPlayer .workspace .tab-playlist .playlist .playlist-add .blue-button-add {
+						margin-top:4px;
+					}
+
+
+				.IPlayer .workspace .tab-playlist .playlist .playlist-thelist {
+					height:315px;
+					overflow:auto;
+					color:white;
+				}
+
+					.IPlayer .workspace .tab-playlist .playlist ul.lstPlaylist {
+						margin:0px;
+						padding:0px;
+						list-style-type:none;
+						margin-left:10px;
+						margin-top:2px;
+						margin-right:8px;
+					}
+
+					.IPlayer .workspace .tab-playlist .playlist ul.lstPlaylist > li {
+						padding-bottom:7px;
+						border-bottom:1px solid #1d1d1d;
+						margin-bottom:7px;
+					}
+
+						.IPlayer .workspace .tab-playlist .playlist .playlist-main {
+							position:relative;
+						}
+
+
+
+						.IPlayer .workspace .tab-playlist .playlist .actions {
+							position:absolute;
+							right:0px;
+							top:3px;
+				
+						}
+
+	
+
+							.IPlayer .workspace .actions span {
+								display:inline-block;
+								cursor:pointer;
+								padding:1px;
+							}
+
+							.IPlayer .workspace .actions .move-right {
+								width:10px;
+								height:16px;
+								background:url(../images/workspace/playlist/move-right.png)  no-repeat;
+							}
+
+							.IPlayer .workspace .actions .ico-play {
+								width:12px;
+								height:14px;
+								vertical-align:top;
+								margin-top:1px;
+								background:url(../images/workspace/playlist/ico-play.png) no-repeat;
+							}
+
+							.IPlayer .workspace .actions .ico-remove {
+								width:14px;
+								height:14px;
+								position:relative;
+								top:-1px;
+								margin-right:1px;
+								background:url(../images/workspace/playlist/ico-remove.png) no-repeat;
+							}
+
+							.IPlayer .workspace .actions .ico-rename {
+								width:12px;
+								height:15px;
+								position:relative;
+								
+								background:url(../images/workspace/playlist/ico-rename.png) no-repeat;
+							}
+
+						.IPlayer .workspace .tab-playlist .playlist .ico-arrow {
+							display:inline-block;
+							width:10px;
+							height:10px;
+							background:url(../images/workspace/playlist/arrow-right.png) no-repeat;
+							vertical-align:top;
+							margin-top:5px;
+						}
+
+						.IPlayer .workspace .tab-playlist .playlist .ico-arrow-bottom {
+							background:url(../images/workspace/playlist/arrow-bottom.png) no-repeat;
+						}
+
+						.IPlayer .workspace .tab-playlist .playlist .playlist-name {
+							font-size:14px;
+							color:#989898;
+							display:inline-block;
+							margin-left:2px;
+							width:235px;
+							
+						}
+
+						.IPlayer .workspace .tab-playlist .playlist ul.lstPlaylist ul {
+							margin:0px;
+							padding:0px;
+							list-style-type:none;
+							display:none;
+							
+						}
+
+						.IPlayer .workspace .tab-playlist .playlist ul.lstPlaylist ul li {
+							margin-top:4px;
+							padding-left:13px;
+							position:relative;
+						}
+
+						.IPlayer .workspace .tab-playlist .playlist ul.lstPlaylist ul li .song-icon {
+							float:left;
+							display:inline;
+							margin-right:3px;
+							width:11px;
+							height:15px;
+							background:url(../images/workspace/playlist/earphone.png) no-repeat;
+							margin-top:3px;
+						}
+						
+						.IPlayer .workspace .tab-playlist .playlist ul.lstPlaylist ul li .song-title {
+							font-size:14px;
+							color:#989898;
+							width:231px;
+						}
+
+
+
+					
+
+				.IPlayer .workspace .tab-playlist .playlist .playlist-footer {
+					margin-top:2px;
+					height:31px;
+				}
+
+					.IPlayer .workspace .tab-playlist .playlist .playlist-footer .playlist-count {
+						display:inline-block;
+						margin-top:8px;
+						margin-left:13px;
+						color:#ececec;
+						font-size:12px;
+					}
+
+
+			
+
+			.IPlayer .workspace .tab-playlist .songslist {
+				float:left;
+				display:inline;
+				height:100%;
+				width:370px;
+			}
+
+				.IPlayer .workspace .tab-playlist .songslist ul {
+					margin:0px;
+					padding:0px;
+					list-style-type:none;
+					overflow:hidden;
+					margin-top:3px;
+				}
+
+				.IPlayer .workspace .tab-playlist .songslist ul li {
+					clear:both;
+					font-size:12px;
+					color:#d8d8d8;
+					padding-top:3px;
+					overflow:hidden;
+					margin-left:2px;
+					margin-right:4px;
+					cursor:pointer;
+				}
+
+					.IPlayer .workspace .tab-playlist .songslist ul li:hover {
+						background:#12394d;
+
+					}
+			
+
+					.IPlayer .workspace .tab-playlist .songslist ul li .song-name {
+						float:left;
+						display:inline;
+						background:url(../images/workspace/playlist/earphone.png) 6px 2px no-repeat;
+						width:260px;
+						padding-left:22px;
+						margin-top:1px;
+						overflow:hidden;
+						
+						
+					}
+
+					.IPlayer .workspace .tab-playlist .songslist ul li .duration {
+						float:right;
+						display:inline;
+						width:51px;
+						text-align:right;
+						padding-right:5px;
+						margin-top:1px;
+					}
+
+					.IPlayer .workspace .tab-playlist .songslist ul li .actions {
+						float:right;
+						display:inline;
+						width:18px;
+						padding-right:2px;
+						text-align:right;
+						padding-top:3px;
+					
+					}
+
+			.IPlayer .workspace .tab-playlist .socialarea {
+				float:left;
+				display:inline;
+				height:100%;
+				width:230px;
+				color:white;
+				text-align:center;
+			}
+
+
+
+	/* WORKSPACE - END */
+
+
+
+
+	/* FOOTER - START */
+	.IPlayer .footer {
+		height:115px;
+		background:#171717;
+		position:relative;
+	}
+
+		.IPlayer .footer .progress-bar {
+			margin:0px 10px;
+			position:relative;
+			height:7px;
+			overflow:hidden;
+		}
+
+			.IPlayer .footer .progress-bar div {
+				height:100%;
+			}
+
+			.IPlayer .footer .progress-bar .pix {
+				position:absolute;
+				top:1px;
+				left:1px;
+				width:1px;
+				height:1px;
+				background:#404040;
+				z-index:4;
+			}
+
+			.IPlayer .footer .progress-bar .pix2 {
+				position:absolute;
+				top:1px;
+				right:1px;
+				width:1px;
+				height:1px;
+				background:#404040;
+				z-index:4;
+			}
+
+			.IPlayer .footer .progress-bar .fill-container {
+				position:absolute;
+				top:0px;
+				left:0px;
+				width:908px;
+				height:100%;
+				z-index:3;
+			}
+
+			.IPlayer .footer .progress-bar .fill {
+				margin-left:1px;
+				margin-top:1px;
+				height:4px;
+				width:0%;
+				background:url(../images/player-bar/progress/fill.gif);
+			}
+
+
+			.IPlayer .footer .progress-bar .buffer-container {
+				position:absolute;
+				top:0px;
+				left:0px;
+				width:908px;
+				height:100%;
+				z-index:2;
+			}
+
+			.IPlayer .footer .progress-bar .buffer {
+				margin-left:1px;
+				margin-top:1px;
+				height:4px;
+				width:0%;
+				background:url(../images/player-bar/progress/buffer.gif);
+			}
+
+			
+			.IPlayer .footer .progress-bar .left {
+				position:absolute;
+				left:0px;
+				top:0px;
+				width:3px;
+				background:url(../images/player-bar/progress/left.png) no-repeat;
+			}
+
+			.IPlayer .footer .progress-bar .repeater {
+				margin-left:3px;
+				margin-right:3px;
+				background:url(../images/player-bar/progress/repeater.png);
+			}
+
+			.IPlayer .footer .progress-bar .right {
+				position:absolute;
+				right:0px;
+				top:0px;
+				width:3px;
+				background:url(../images/player-bar/progress/right.png) no-repeat;
+			}
+
+		.IPlayer .footer .thumbnail {
+			margin-top:9px;
+			margin-left:10px;
+		}
+
+			.IPlayer .footer .thumbnail .song-thumbnail {
+				float:left;
+				display:inline;
+				margin-right:13px;
+			}
+
+			.IPlayer .footer .thumbnail .song-name {
+				display:inline-block;
+				color:white;
+				font-size:14px;
+				margin-top:35px;
+				
+			}
+
+		.IPlayer .footer .controllers {
+			position:absolute;
+			top:17px;
+			right:10px;
+		}
+
+			.IPlayer .footer .controllers .icon {
+				display:inline-block;
+				height:19px;
+				margin-top:7px;
+			}
+
+			.IPlayer .footer .controllers .button {
+				cursor:pointer;
+			}
+
+
+			.IPlayer .footer .controllers .box {
+				height:33px;
+				
+			}
+
+				.IPlayer .footer .controllers .box .box-side {
+					float:left;
+					display:inline;
+					height:100%;
+				}
+
+				.IPlayer .footer .controllers .box .l {
+					width:7px;
+					background:url(../images/player-bar/controllers/box-left.png) no-repeat;			
+				}
+		
+				.IPlayer .footer .controllers .box .c {
+					background:url(../images/player-bar/controllers/box-repeater.png);
+					text-align:right;
+					width:145px;
+				}
+
+				.IPlayer .footer .controllers .box .r {
+					width:7px;
+					background:url(../images/player-bar/controllers/box-right.png) no-repeat;			
+				}
+
+			.IPlayer .footer .controllers .ico-play {
+				width:13px;
+				margin-right:9px;
+				background:url(../images/player-bar/controllers/play.png) no-repeat;
+			}
+
+			.IPlayer .footer .controllers  .loudspeaker {
+				float:right;
+				display:inline;
+				width:113px;
+				text-align:left;
+				margin-right:6px;
+			}
+
+				.IPlayer .footer .controllers .loudspeaker .ico-loudspeaker {
+					width:17px;
+					background:url(../images/player-bar/controllers/loudspeaker.png) no-repeat;
+				}
+
+				.IPlayer .footer .controllers  .loudspeaker .sound-controller {
+					float:right;
+					display:inline;
+					width:90px;
+					position:relative;
+					height:9px;
+					margin-top:12px;
+
+				}
+
+					.IPlayer .footer .controllers  .loudspeaker .sound-controller .line {
+						width:100%;
+						height:1px;
+						left:1px;
+						position:absolute;
+						top:4px;
+						background:white;
+					}
+
+					.IPlayer .footer .controllers  .loudspeaker .sound-controller .drag {
+						position:absolute;
+						top:0px;
+						left:0px;
+						cursor:pointer;
+						width:9px;
+						height:9px;
+						background:url(../images/player-bar/controllers/loudspeaker-drag.png) no-repeat;
+					}
+
+	/* FOOTER - END */
+
+.Player_Templates {
+	display:none;
+}

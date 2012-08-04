@@ -1,0 +1,13 @@
+{{#hasSongs}}
+	<ul>
+		{{#songs}}
+		<li data-id="{{id}}">
+			<div class="song-icon"></div>
+			<div class="song-title">{{name}}</div>
+			<div class="icons">
+				<span class="ico-rename"><!-- //--></span><span class="ico-remove"><!-- //--></span><span class="ico-play"><!-- //--></span><span class="move-right"><!-- //--></span>
+			</div>
+		</li>
+		{{/songs}}
+	</ul>
+{{/hasSongs}}

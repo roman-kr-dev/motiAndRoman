@@ -1,0 +1,15 @@
+{{#hasPlaylists}}
+<ul id="lstPlayList" class="lstPlaylist">
+	{{#list}}
+	<li class="playlist-item" data-id="{{id}}">
+		<div class="playlist-main">
+			<span class="ico-arrow"><!-- //--></span><span class="playlist-name">{{name}}</span>
+			<div class="actions">
+				<span class="ico-rename"><!-- //--></span><span class="ico-remove"><!-- //--></span><span class="ico-play"><!-- //--></span><span class="move-right"><!-- //--></span>
+			</div>
+		</div>
+		@Include["Template_PlayListSongItem"];
+	</li>
+	{{/list}}
+</ul>
+{{/hasPlaylists}}

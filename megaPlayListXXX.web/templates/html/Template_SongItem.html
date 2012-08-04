@@ -1,0 +1,12 @@
+{{#hasSongs}}
+	<ul>
+	{{#songs}}
+		<li class="song-item" data-playListId="{{playListId}}" data-id="{{id}}">
+			<div class="song-name">{{name}}</div>
+			<div class="actions"><span class="ico-remove"><!-- //--></span></div>
+			<div class="duration">{{duration}}</div>
+		</li>
+	{{/songs}}
+	</ul>
+{{/hasSongs}}
+							

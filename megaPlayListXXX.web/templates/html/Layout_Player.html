@@ -1,0 +1,81 @@
+<div class="IPlayer">
+	<div class="header">
+		<div class="title">
+			IPlayer
+		</div>
+		<div class="tabs">
+			<ul>
+				<li data-tab="home">Home</li>
+				<li data-tab="playlist">Playlist</li>
+			</ul>
+		</div>
+		<div class="right-buttons">
+			<ul class="buttons">
+				<li><span id="hideWindow" class="close"><!-- //--></span></li>
+				<li><span class="settings"><!-- //--></span></li>
+			</ul>
+			<span class="login-status">Logged as nachum ginat</span>
+
+		</div>
+	</div>
+	<div class="workspace">
+		<div class="tab-content tab-home"></div>
+		<div class="tab-content tab-playlist" id="tab-playlist" style="display:block;">
+			<div class="playlist general-sep">
+				<div class="playlist-add">
+					<input class="focused" type="text" value="Add a new playlist..." />
+					<span class="blue-button-add"><!-- //--></span>
+				</div>
+				<div class="playlist-thelist" id="playlist-thelist">
+					<ul id="lstPlayList" class="lstPlaylist">
+
+					</ul>							
+				</div>
+				<div class="playlist-footer general-sep-h">
+					<span class="playlist-count"><span class="playlist_count">0</span> playlists</span>
+				</div>
+			</div>
+			<div class="songslist general-sep" id="songslist-thelist"></div>
+			<div class="socialarea">
+				<div style="margin-top:5px;">
+					Social
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="footer">
+		<div class="progress-bar">
+			<div class="fill-container"><div class="fill" id="ProgressFill"></div></div>
+			<div class="buffer-container"><div class="buffer"  id="ProgressBuffer"></div></div>
+			<div class="pix"></div>
+			<div class="pix2"></div>
+			<div class="left"></div>
+			<div class="repeater"></div>
+			<div class="right"></div>
+		</div>
+		<div class="controllers">
+			<div style="position:absolute;left:-110px;width:100px;text-align:right;color:white;margin-top:8px;font-size:14px;" id="songTimer"></div>
+			<div class="box">
+				<div class="box-side l"></div>
+				<div class="box-side c">
+					
+					<span class="icon ico-play"><!-- //--></span>
+					<div class="loudspeaker">
+						<span class="icon ico-loudspeaker"><!-- //--></span>
+						<div class="sound-controller">
+							<div class="line"></div>
+							<div class="drag"></div>
+						</div>
+					</div>
+
+				</div>
+				<div class="box-side r"></div>
+			</div>
+		</div>
+		<div class="thumbnail" id="CurrentSongInfo">
+			<img class="song-thumbnail" alt="" />
+			<span class="song-name"></span>
+		</div>
+
+	</div>
+</div>

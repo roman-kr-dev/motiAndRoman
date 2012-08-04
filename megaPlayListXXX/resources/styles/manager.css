@@ -1,0 +1,8 @@
+iframe.MegaPlayListXXX-player-iframe {
+	position:fixed;
+	top:25px;
+	left:25px;
+	z-index:2147483600;
+	width:930px;
+	height:525px;
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>About the JW Player 5</title>
+	<script type="text/javascript" src="jwplayer.js"></script>
+</head>
+<body>
+
+
+
+	
+
+
+
+
+<div id="container"></div>
+<p id="message"></p>
+
+<script type="text/javascript">
+  jwplayer("container").setup({
+    file: "tutti.mp3",
+    flashplayer: "/player.swf",
+    image: "preview.jpg",
+	controlbar: "none",
+	icons: false,
+        events: {
+            onComplete: function() { alert("the video is finished!"); }
+        }
+  });
+
+  jwplayer().onPlay(function() { setText("Video is playing!"); });
+  jwplayer().onPause(function() { setText("Why did you pause?"); });
+  jwplayer().onBuffer(function() { setText("Video is buffering..."); });
+  jwplayer().onIdle(function() { setText("The video stopped."); });
+
+  function setText(text) {
+    document.getElementById("message").innerHTML = text;
+  }
+</script>
+
+
+
+
+</body>
+</html>
