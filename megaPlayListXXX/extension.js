@@ -19,7 +19,3 @@ appAPI.ready(function($) {
 	appAPI.resources.includeCSS("styles/manager.css");
 
 	var megaPlayListXXX = new MegaPlayListXXX.PlayList();
-
-	//var moti = gay;
-	//moti is gay
-});
