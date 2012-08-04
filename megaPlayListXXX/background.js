@@ -106,17 +106,13 @@ MegaPlayListXXX.ActionsRouter = (function ($) {
 // manage the GlobalObject (the global object store everything about the state of the player)
 MegaPlayListXXX.GlobalObject = (function ($) {
 	var This,
-		GlobalObject = {
+		globalObject = {
 			hasLoaded: false, // used to check if we need to sync or return the object
 			windowIsOpen: false, // used to check if the player window is open or close
 			Playlist: {}, // getPlayListFromDB()
 			PlayBar: {
 				selectedIndex: -1,
-				songs:
-				[
-					{id: 501, playListId: 1, name: "BALADA BOA GUSTTAVO LIMA NOVO DVD", source: {type: "youtube", model: {href: "http://www.youtube.com/watch?v=5NNi4JIwsCo&feature=related"}}},
-					{id: 502, playListId: 1, name: "Euphoria", source: {type: "youtube", model: {href: "http://www.youtube.com/watch?v=t5qURKt4maw"}}},
-				],
+				songs: [],
 				hasSongs: true,
 				controllersState: {
 					playListOptions: {
@@ -138,18 +134,28 @@ MegaPlayListXXX.GlobalObject = (function ($) {
 		};
 
 	var actions = {
-		"show/hide": function(bShow) {
-			GlobalObject.windowIsOpen = bShow;
+		"show/hide": function(model) {
+			globalObject.windowIsOpen = model.bShow;
 		},
-		"onBufferChange": function(bufferPercent) {
-			GlobalObject.PlayBar.controllersState.progress.bufferPercent = bufferPercent;
+		"onBufferChange": function(model) {
+			globalObject.PlayBar.controllersState.progress.bufferPercent = model.bufferPercent;
 		},
 		"onTimeUpdate": function(info) {
-			GlobalObject.PlayBar.controllersState.progress.duration = info.duration;
-			GlobalObject.PlayBar.controllersState.progress.position = info.position;
+			globalObject.PlayBar.controllersState.progress.duration = info.duration;
+			globalObject.PlayBar.controllersState.progress.position = info.position;
 		},
 		"onComplete": function() {
-			GlobalObject.PlayBar.controllersState.progress.position = GlobalObject.PlayBar.controllersState.progress.duration;
+			globalObject.PlayBar.controllersState.progress.position = globalObject.PlayBar.controllersState.progress.duration;
+		},
+		"addPlayListToPlayBar": function(model) {
+			
+			var oPlayList = This.getPlayListById(model.iPlayListId);
+		
+			var aSongsToAdd = oPlayList.songs;
+			
+			globalObject.PlayBar.songs = globalObject.PlayBar.songs.concat(aSongsToAdd);
+			
+			return aSongsToAdd;			
 		}
 	};
 
@@ -158,25 +164,27 @@ MegaPlayListXXX.GlobalObject = (function ($) {
 			This = this;
 		},
 		getObject: function() {
-			return GlobalObject;
+			return globalObject;
 		},
 		updateObject: function (action, model) {
 			!actions[action] || (function() {
-				actions[action].call(action,model);
+				
+				model || (model = {});
+				model.returnObject = actions[action].call(action,model);
 				This.updateChangesOnPlayerDomain(action, model);
 			})();
 
-			//console.log("GlobalObject > " + JSON.stringify({action:action,model:model}));
+			//console.log("globalObject > " + JSON.stringify({action:action,model:model}));
 		},
 		updateChangesOnPlayerDomain: function(action,model) {
-			sendMessageToIframe('Background.onUpdate', GlobalObject);
-			sendMessageToIframe('Background.GlobalObjectUpdate.' + action, model);
+			sendMessageToIframe('Background.onUpdate', globalObject);
+			sendMessageToIframe('Background.globalObjectUpdate.' + action, model);
 
 		},
 		getPlayListFromDB: function(fCallback) {
 			setTimeout(function() {
-				GlobalObject.hasLoaded = true;
-				GlobalObject.Playlist = {
+				globalObject.hasLoaded = true;
+				globalObject.Playlist = {
 					hasPlaylists: true,
 					list:
 					[
@@ -197,6 +205,17 @@ MegaPlayListXXX.GlobalObject = (function ($) {
 				};
 				fCallback();
 			},1000);
+		},
+		getPlayListById: function(iPlayListId) {
+			var oPlayList;
+			$.each(globalObject.Playlist.list, function() {
+				if (this.id == iPlayListId)
+				{
+					oPlayList = this;
+					return false;
+				}
+			});
+			return oPlayList;
 		}
 	});
 

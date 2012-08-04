@@ -63,7 +63,7 @@ define(
 					},
 					onPlay: function(e) {  },
 					onBufferChange: function(e) {
-						updateGlobalObject("onBufferChange",e.bufferPercent)
+						updateGlobalObject("onBufferChange",{bufferPercent:e.bufferPercent})
 					},
 					onTime: function(e) {
 						updateGlobalObject("onTimeUpdate",{duration:e.duration,position:e.position})

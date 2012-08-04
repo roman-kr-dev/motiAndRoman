@@ -5,8 +5,6 @@
 */
 define(['jQuery','Class','Helpers','Template','player/domain'], function($,Class,Helpers,Template,Domain) {
 
-	
-
 	var This, // hold the context of current class
 		domain, // hold reference to MegaPlayer.Domain class
 		templates, // i am using this variable for hold the code of mustache templates
@@ -62,6 +60,9 @@ define(['jQuery','Class','Helpers','Template','player/domain'], function($,Class
 						domain.events.add("onBufferChange", Domain_BufferChange);
 						domain.events.add("onTimeUpdate", Domain_TimeUpdate);
 						domain.events.add("onComplete", Domain_SongComplete);
+						domain.events.add("onPlayBarUpdate", Domain_PlayBarUpdate);
+
+						
 
 						
 						domain.start();
@@ -80,7 +81,6 @@ define(['jQuery','Class','Helpers','Template','player/domain'], function($,Class
 
 			This = this;
 			$.extend(true,config,options);
-	
 			
 		},
 
@@ -109,36 +109,15 @@ define(['jQuery','Class','Helpers','Template','player/domain'], function($,Class
 
 			var settings = {
 				index: null, // int, play song by index
-				song: null, // object, play song by reference to song object (domain.playList[].songs[])
 				next: null, // boolean, play the next song in the list, if the next song does not exists, i  play the first song
 				prev: null // boolean, play the previous song in the list, if the previous song does not exists, play the last song
 			};
 
 			$.extend(settings,options);
 
-			var oSong = null;
+			domain.play(settings);
 
-			if (settings.song)
-			{
-				oSong = settings.song;
-			} else if ($.type(settings.index) == "number")
-			{
-				
-				var oSongEl = elements.songsList.find("li.song-item:eq("+settings.index+")");
-				if (oSongEl.length)
-				{
-					oSong = domain.getSong(+oSongEl.attr("data-playListId"), +oSongEl.attr("data-id"));
-				}
-			} else if (settings.next)
-			{
-				
-			} else if (settings.prev)
-			{
 
-			}
-
-			if (oSong)
-				domain.play(oSong);
 
 		},
 
@@ -164,8 +143,14 @@ define(['jQuery','Class','Helpers','Template','player/domain'], function($,Class
 		},
 
 		addPlayListToPlayBar: function(iPlayListId) {
+			
+			domain.addPlayListToPlayBar(iPlayListId);
+
+			/*
 			var oPlayList = domain.getPlayListById(iPlayListId);
 			if (!oPlayList) return;
+
+			alert(JSON.stringify(oPlayList));
 
 			Template.RenderAndUpdate(
 				"Template_SongItem",
@@ -175,11 +160,11 @@ define(['jQuery','Class','Helpers','Template','player/domain'], function($,Class
 					mode: "append"
 				},
 				function(s) {
-
 					elements.songsList.find("ul:gt(0)").each(function() { $(this).children().appendTo($(this).prev("ul")); $(this).remove(); });
 					elements.songsList.find("li:not(.added)").css("display","none").addClass("added").fadeIn(300);
 				}
 			);
+			*/
 
 		},
 
@@ -221,11 +206,12 @@ define(['jQuery','Class','Helpers','Template','player/domain'], function($,Class
 		elements.progressBuffer.css("width",bufferPercent + "%");
 	}
 
+
 	function Domain_TimeUpdate(info) {
 
-		elements.progressFill.css("width",(info.position/info.duration*100) + "%");
+		elements.progressFill.css("width",Math.min((info.position/(info.duration-1)*100),100) + "%");
 
-		var totalSec = Math.ceil(info.position);
+		var totalSec = Math.floor(info.position);
 
 		var hours = parseInt( totalSec / 3600 ) % 24;
 		var minutes = parseInt( totalSec / 60 ) % 60;
@@ -241,10 +227,37 @@ define(['jQuery','Class','Helpers','Template','player/domain'], function($,Class
 	}
 
 	function Domain_SongComplete() {
-		elements.progressFill.css("width","100%");
-		This.play({
-			next: true
-		});	
+		
+		setTimeout(function() {
+
+			elements.progressFill.animate({
+				width: "100%"
+			},200);
+		},30);
+
+	}
+
+	function Domain_PlayBarUpdate(songs) {
+
+		var modelForTemplate = {
+			hasSongs: !!songs.length,
+			songs: songs
+		}
+
+		Template.RenderAndUpdate(
+			"Template_SongItem",
+			{
+				
+				model: modelForTemplate,
+				to: elements.songsList,
+				mode: "append"
+			},
+			function(s) {
+				elements.songsList.find("ul:gt(0)").each(function() { $(this).children().appendTo($(this).prev("ul")); $(this).remove(); });
+				elements.songsList.find("li:not(.added)").css("display","none").addClass("added").fadeIn(300);
+			}
+		);
+
 	}
 
 	function Domain_PlayStop() {
@@ -367,6 +380,10 @@ define(['jQuery','Class','Helpers','Template','player/domain'], function($,Class
 			}
 		);
 
+		elements.tabPlayList.find(".playlist_count_num").html(domain.getList().list.length);
+
+
+
 	}
 
 	function setEvents() {
@@ -384,7 +401,7 @@ define(['jQuery','Class','Helpers','Template','player/domain'], function($,Class
 		}
 
 		function getSongIndex(oEl) {
-			var oLI = $(oEl).parents("LI:first");
+			var oLI = $(oEl).is("li") ? $(oEl) : $(oEl).parents("LI:first");
 			return oLI.parent().children().index(oLI);
 		}
 
@@ -467,13 +484,13 @@ define(['jQuery','Class','Helpers','Template','player/domain'], function($,Class
 
 				elements.songsList.find("li.song-item").live("click", function() {
 
-					var iPlayListId = +$(this).attr("data-playListId");
-					var iSongId = +$(this).attr("data-id");
+					var iIndex = getSongIndex(this);
 					
-					var oSong = domain.getSong(iPlayListId, iSongId);
+					
 					This.play({
-						song: oSong
+						index: iIndex
 					});
+					
 
 				});
 

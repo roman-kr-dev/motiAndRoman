@@ -198,17 +198,42 @@ define(['jQuery','Class','Helpers'], function($,Class,Helpers) {
 
 			},
 
-			play: function(song) { // song = reference to song object, for example: {id: 500, name: "Queen - Show must go on", source: {type: "youtube", model: {href: "http://www.youtube.com/watch?v=YHOKosvAxcs"}}}
+			play: function(options) { // song = reference to song object, for example: {id: 500, name: "Queen - Show must go on", source: {type: "youtube", model: {href: "http://www.youtube.com/watch?v=YHOKosvAxcs"}}}
 
-				this.stop();
+				var settings = {
+					index: null, // int, play song by index
+					next: null, // boolean, play the next song in the list, if the next song does not exists, i  play the first song
+					prev: null // boolean, play the previous song in the list, if the previous song does not exists, play the last song
+				};
+
+				$.extend(settings,options);
+
+				// this.stop();
+
+				var song = null;
+				if ($.type(settings.index) == "number")
+				{
+					song = globalObject.PlayBar.songs[settings.index];
+				} else if (settings.next)
+				{
+					song = globalObject.PlayBar.songs[globalObject.PlayBar.selectedIndex + 1];
+				} else if (settings.prev)
+				{
+					song = globalObject.PlayBar.songs[globalObject.PlayBar.selectedIndex - 1];
+				}
+
 				This.events.fire("onPlay",song);
-
 				console.log("Domain > play");
 				sendToBackground("play",song);
+
 			},
 
 			stop: function() {
 
+			},
+
+			addPlayListToPlayBar: function(iPlayListId) {
+				updateGlobalObject("addPlayListToPlayBar",{iPlayListId:iPlayListId});
 			},
 
 		// Extension Callbacks
@@ -229,19 +254,22 @@ define(['jQuery','Class','Helpers'], function($,Class,Helpers) {
 				onUpdate: function(oGlobalObject) {
 					globalObject = oGlobalObject;
 				},
-				GlobalObjectUpdate: {
+				globalObjectUpdate: {
 					"show/hide": function(model) {
-						alert("show/hide update");
+						console.log("show/hide update");
 					},
-					"onBufferChange": function(bufferPercent) {
-						This.events.fire("onBufferChange",bufferPercent);
+					"onBufferChange": function(model) {
+						This.events.fire("onBufferChange",model.bufferPercent);
 					},
 					"onTimeUpdate": function(info) {
 						This.events.fire("onTimeUpdate",info);
 					},
 					"onComplete": function() {
 						This.events.fire("onComplete");
-						
+					},
+					"addPlayListToPlayBar": function(model) {
+						This.events.fire("onPlayBarUpdate",model.returnObject);
+						// aaaaaaaaaaa
 					}
 				}
 			},
@@ -320,16 +348,21 @@ define(['jQuery','Class','Helpers'], function($,Class,Helpers) {
 							sAction = sAction.substring(sAction.split(".")[0].length+1,sAction.length);
 						}
 
+						
+
 						!oFunc[sAction] || oFunc[sAction].call(sAction,e.data.model);
 					}
 				}, false);
+			}
+
+			function updateGlobalObject(action,model) {
+				sendToExtension("updateGlobalObject",{action:action,model:model});
 			}
 			
 
 			function sendToExtension(action,model) {
 				model || (model={});
 
-				
 				window.parent.postMessage({
 					action: "MegaPlayListXXX." + action,
 					model: model

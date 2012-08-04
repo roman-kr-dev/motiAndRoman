@@ -21,6 +21,4 @@ appAPI.ready(function($) {
 	var megaPlayListXXX = new MegaPlayListXXX.PlayList();
 
 
-	var bah = "dssd";
-
 });
