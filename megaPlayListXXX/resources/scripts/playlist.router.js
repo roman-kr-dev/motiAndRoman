@@ -2,7 +2,6 @@ MegaPlayListXXX.ActionsRouter = (function ($) {
 	var This,
 		baseCSS = MegaPlayListXXX.Config.baseCSS,
 		config = MegaPlayListXXX.Config.ActionsRouter,
-		globalObject,
 		playerIframe;
 
 	var actions = {
@@ -19,23 +18,27 @@ MegaPlayListXXX.ActionsRouter = (function ($) {
 			postToBackground("sendToBackgroundFrame", {action:model.action, model:model.model});
 		},
 
+		"updateGlobalObject": function(model) {
+			updateGlobalObject(model.action,model.model);
+		},
+
+
+
 		// action methods
 		"play": function(song) {
 			postToBackground(this,song);
 		},
 		"show/hide": function() {
-			var bShow = $(playerIframe).css("display") == "none";
 
+			var bShow = $(playerIframe).css("display") == "none";
 			$(playerIframe).css("display",bShow ? "block" : "none");
-			
-			updateGlobalObject(this,bShow);
+			updateGlobalObject(this,{bShow:bShow});
 		}
 	};
 
 	return Class.extend({
 		init: function() {
 			This = this;
-			//globalObject = new MegaPlayListXXX.GlobalObject();
 		},
 		route:function (action, model) {	
 			!actions[action] || actions[action].call(action, model);
@@ -50,7 +53,6 @@ MegaPlayListXXX.ActionsRouter = (function ($) {
 	}
 
 	function postToBackground(action,model) {
-		//globalObject.updateObject(action,model);
 		appAPI.message.toBackground({
 			action:action,
 			model: model
@@ -58,7 +60,6 @@ MegaPlayListXXX.ActionsRouter = (function ($) {
 	}
 
 	function postToIframe(action, model) {
-		//globalObject.updateObject(action,model);
 		window.postMessage({action:'MegaPlayListXXX.response.' + action, model:model}, '*');
 	}
 })(jQuery);

@@ -33,8 +33,7 @@ MegaPlayListXXX.PlayList = (function ($) {
 	}
 
 	function initPlaylistIframe() {
-		//playerIframe = $('<iframe frameborder="no" id="' + config.iframePlayerId + '" src="' + config.iframePlayerUrl + '" class="' + baseCSS + 'player-iframe' + '" />').appendTo('body');
-		
-		//actionsRouter.setPlayetIframe(playerIframe);
+		playerIframe = $('<iframe frameborder="no" id="' + config.iframePlayerId + '" src="' + config.iframePlayerUrl + '" class="' + baseCSS + 'player-iframe' + '" />').appendTo('body');
+		actionsRouter.setPlayetIframe(playerIframe);
 	}
 })(jQuery);
