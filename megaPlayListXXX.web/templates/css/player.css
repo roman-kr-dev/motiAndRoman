@@ -352,7 +352,10 @@ body {
 
 					.IPlayer .workspace .tab-playlist .songslist ul li:hover {
 						background:#12394d;
+					}
 
+					.IPlayer .workspace .tab-playlist .songslist ul li.selected {
+						background:#313131;
 					}
 			
 

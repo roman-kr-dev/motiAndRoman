@@ -40,6 +40,7 @@ MegaPlayListXXX.PlayListBackground = (function ($) {
 	}
 
 	function initPlayerIframe() {
+		//alert(config.iframePlayerUrl);
 		playerIframe = $('<iframe src="' + config.iframePlayerUrl + '" />').appendTo('body');
 	}
 })(jQuery);

@@ -61,10 +61,6 @@ define(['jQuery','Class','Helpers','Template','player/domain'], function($,Class
 						domain.events.add("onTimeUpdate", Domain_TimeUpdate);
 						domain.events.add("onComplete", Domain_SongComplete);
 						domain.events.add("onPlayBarUpdate", Domain_PlayBarUpdate);
-
-						
-
-						
 						domain.start();
 					},
 					function(f) {
@@ -192,14 +188,17 @@ define(['jQuery','Class','Helpers','Template','player/domain'], function($,Class
 		}
 	});
 
-	function Domain_PlayStart(song) {
+	function Domain_PlayStart(model) {
+
+		var song = model.song;
 
 		elements.progressFill.css("width","0%");
 		elements.progressBuffer.css("width","0%");
 
+		elements.songsList.find("li.song-item").removeClass("selected").filter(":eq("+model.index+")").addClass("selected");
 		elements.currentSongThumbnail.attr("src", song.thumbnail || config.images.defaultSongCover);
 		elements.currentSongName.html(song.name);
-	
+
 	}
 
 	function Domain_BufferChange(bufferPercent) {
@@ -229,10 +228,12 @@ define(['jQuery','Class','Helpers','Template','player/domain'], function($,Class
 	function Domain_SongComplete() {
 		
 		setTimeout(function() {
-
 			elements.progressFill.animate({
 				width: "100%"
 			},200);
+			domain.play({
+				next: true
+			});
 		},30);
 
 	}

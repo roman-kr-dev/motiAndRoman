@@ -6,7 +6,7 @@ MegaPlayListXXX.Config = {
 	PlayList:{
 		iframePlayerId:'MegaPlayListXXX-player',
 		iframePlayerBaseUrl:'http://megaplayer.com',
-		iframePlayerUrl:'http://megaplayer.com/megaPlayListXXX.web/player.html?x='+new Date().getTime(),
+		iframePlayerUrl:'http://megaplayer.com/megaPlayList/megaPlayListXXX.web/player.html?x='+new Date().getTime(),
 		messageRegExp:/^MegaPlayListXXX\.(.*)/
 	},
 

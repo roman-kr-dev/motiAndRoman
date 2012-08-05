@@ -200,31 +200,15 @@ define(['jQuery','Class','Helpers'], function($,Class,Helpers) {
 
 			play: function(options) { // song = reference to song object, for example: {id: 500, name: "Queen - Show must go on", source: {type: "youtube", model: {href: "http://www.youtube.com/watch?v=YHOKosvAxcs"}}}
 
+				
 				var settings = {
 					index: null, // int, play song by index
-					next: null, // boolean, play the next song in the list, if the next song does not exists, i  play the first song
-					prev: null // boolean, play the previous song in the list, if the previous song does not exists, play the last song
+					next: null // boolean, play the next song in the list, if the next song does not exists, i  play the first song
 				};
 
 				$.extend(settings,options);
 
-				// this.stop();
-
-				var song = null;
-				if ($.type(settings.index) == "number")
-				{
-					song = globalObject.PlayBar.songs[settings.index];
-				} else if (settings.next)
-				{
-					song = globalObject.PlayBar.songs[globalObject.PlayBar.selectedIndex + 1];
-				} else if (settings.prev)
-				{
-					song = globalObject.PlayBar.songs[globalObject.PlayBar.selectedIndex - 1];
-				}
-
-				This.events.fire("onPlay",song);
-				console.log("Domain > play");
-				sendToBackground("play",song);
+				updateGlobalObject("play",settings);
 
 			},
 
@@ -270,6 +254,12 @@ define(['jQuery','Class','Helpers'], function($,Class,Helpers) {
 					"addPlayListToPlayBar": function(model) {
 						This.events.fire("onPlayBarUpdate",model.returnObject);
 						// aaaaaaaaaaa
+					},
+					"play": function() {
+						This.events.fire("onPlay",{
+							index: globalObject.PlayBar.selectedIndex,
+							song: globalObject.PlayBar.songs[globalObject.PlayBar.selectedIndex]
+						});
 					}
 				}
 			},

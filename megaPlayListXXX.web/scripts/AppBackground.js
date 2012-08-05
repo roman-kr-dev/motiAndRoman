@@ -33,6 +33,7 @@ define(
 			play: function(src) {
 				elements.player.load({file: src});
 				elements.player.play(true);
+
 			}
 		});
 
@@ -51,11 +52,10 @@ define(
 		function setElements() {
 			$("body").append('<div class="container" id="container"></div>');
 
-			
 			elements.player = jwplayer("container");
 			elements.player.setup({
 				file: "http://www.youtube.com/watch?v=EgT_us6AsDg",
-				flashplayer: "http://megaplayer.com/megaPlayListXXX.web/scripts/modules/mediaplayer/player.swf",
+				flashplayer: "scripts/modules/mediaplayer/player.swf",
 				autostart: false,
 				events: {
 					onReady: function() {

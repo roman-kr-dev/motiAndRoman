@@ -10,7 +10,7 @@ MegaPlayListXXX.ActionsRouter = (function ($) {
 			sendMessageToIframe(model.action,model.model);
 		},
 		"sendToBackgroundFrame": function(model) {
-			sendMessage(model.action,model.model);
+			sendMessageToBackgroundIframe(model.action,model.model);
 		},
 		"getGlobalObject": function() { // load the global object, we call this function from the Domain
 			if (!globalObject.getObject().hasLoaded)
@@ -19,6 +19,7 @@ MegaPlayListXXX.ActionsRouter = (function ($) {
 				sendMessageToIframe("Background.getGlobalObjectCallback",globalObject.getObject());
 		},
 		"updateGlobalObject": function(model) {
+			//alert(model.action);
 			globalObject.updateObject(model.action,model.model);
 		},
 		"player.init": function(e) {
@@ -31,24 +32,31 @@ MegaPlayListXXX.ActionsRouter = (function ($) {
 		},
 
 		"play": function(song) {
+
 			if (song.source.type == "youtube")
 			{
-				sendMessage(this,song.source.model.href);
+				//alert(song.source.model.href);
+				sendMessageToBackgroundIframe(this,song.source.model.href);
 			}
 		}
 	}
 
-	function sendMessage(action,model,toIframe) {
+	function sendMessageToBackgroundIframe(action,model) {
 		playerIframeWin.postMessage({action:config.baseEvent + action,model:model}, '*');
 	}
 
 	return Class.extend({
 		init: function() {
 			This = this;
-			globalObject = new MegaPlayListXXX.GlobalObject();
+			globalObject = new MegaPlayListXXX.GlobalObject({
+				actionsRouter: This	
+			});
 		},
 		route:function (action, model) {
 			!actions[action] || actions[action].call(action,model);
+		},
+		sendMessageToBackgroundIframe: function(action,model) {
+			sendMessageToBackgroundIframe(action,model);
 		}
 	});
 })(jQuery);

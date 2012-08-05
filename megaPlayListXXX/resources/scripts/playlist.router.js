@@ -26,6 +26,7 @@ MegaPlayListXXX.ActionsRouter = (function ($) {
 
 		// action methods
 		"play": function(song) {
+			
 			postToBackground(this,song);
 		},
 		"show/hide": function() {
