@@ -1,0 +1,473 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="797085c8-ca24-43f9-bb69-32859e1f8412" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/megaPlayListXXX.web/scripts/modules/mediaplayer - Copy/web.config" afterPath="$PROJECT_DIR$/megaPlayListXXX.web/scripts/modules/mediaplayer - Copy/web.config" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/megaPlayListXXX.web/scripts/modules/mediaplayer/web.config" afterPath="$PROJECT_DIR$/megaPlayListXXX.web/scripts/modules/mediaplayer/web.config" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/megaPlayListXXX.web/templates/images/player-bar/controllers/repeat.png" afterPath="$PROJECT_DIR$/megaPlayListXXX.web/templates/images/player-bar/controllers/repeat.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/megaPlayListXXX.web/templates/images/player-bar/controllers/shuffle.png" afterPath="$PROJECT_DIR$/megaPlayListXXX.web/templates/images/player-bar/controllers/shuffle.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/megaPlayListXXX/background.php" afterPath="$PROJECT_DIR$/megaPlayListXXX/background.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/megaPlayListXXX.web/player.background.html" afterPath="$PROJECT_DIR$/megaPlayListXXX.web/player.background.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/megaPlayListXXX.web/player.html" afterPath="$PROJECT_DIR$/megaPlayListXXX.web/player.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/megaPlayListXXX.web/scripts/App.js" afterPath="$PROJECT_DIR$/megaPlayListXXX.web/scripts/App.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/megaPlayListXXX.web/scripts/AppBackground.js" afterPath="$PROJECT_DIR$/megaPlayListXXX.web/scripts/AppBackground.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/megaPlayListXXX.web/scripts/library/base.class.js" afterPath="$PROJECT_DIR$/megaPlayListXXX.web/scripts/library/base.class.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/megaPlayListXXX.web/scripts/library/helpers.js" afterPath="$PROJECT_DIR$/megaPlayListXXX.web/scripts/library/helpers.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/megaPlayListXXX.web/scripts/library/jquery.mousewheel.min.js" afterPath="$PROJECT_DIR$/megaPlayListXXX.web/scripts/library/jquery.mousewheel.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/megaPlayListXXX.web/scripts/library/jquery.outerhtml.js" afterPath="$PROJECT_DIR$/megaPlayListXXX.web/scripts/library/jquery.outerhtml.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/megaPlayListXXX.web/scripts/library/template.js" afterPath="$PROJECT_DIR$/megaPlayListXXX.web/scripts/library/template.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/megaPlayListXXX.web/scripts/libs/backbone/backbone-min.js" afterPath="$PROJECT_DIR$/megaPlayListXXX.web/scripts/libs/backbone/backbone-min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/megaPlayListXXX.web/scripts/libs/backbone/backbone.js" afterPath="$PROJECT_DIR$/megaPlayListXXX.web/scripts/libs/backbone/backbone.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/megaPlayListXXX.web/scripts/libs/base.class/base.class.js" afterPath="$PROJECT_DIR$/megaPlayListXXX.web/scripts/libs/base.class/base.class.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/megaPlayListXXX.web/scripts/libs/helpers/helpers.js" afterPath="$PROJECT_DIR$/megaPlayListXXX.web/scripts/libs/helpers/helpers.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/megaPlayListXXX.web/scripts/libs/jquery/jquery-min.js" afterPath="$PROJECT_DIR$/megaPlayListXXX.web/scripts/libs/jquery/jquery-min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/megaPlayListXXX.web/scripts/libs/jquery/jquery.js" afterPath="$PROJECT_DIR$/megaPlayListXXX.web/scripts/libs/jquery/jquery.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/megaPlayListXXX.web/scripts/libs/loader.js" afterPath="$PROJECT_DIR$/megaPlayListXXX.web/scripts/libs/loader.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/megaPlayListXXX.web/scripts/libs/mustache/mustache.min.js" afterPath="$PROJECT_DIR$/megaPlayListXXX.web/scripts/libs/mustache/mustache.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/megaPlayListXXX.web/scripts/libs/template/template.js" afterPath="$PROJECT_DIR$/megaPlayListXXX.web/scripts/libs/template/template.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/megaPlayListXXX.web/scripts/libs/underscore/underscore-min.js" afterPath="$PROJECT_DIR$/megaPlayListXXX.web/scripts/libs/underscore/underscore-min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/megaPlayListXXX.web/scripts/libs/underscore/underscore.js" afterPath="$PROJECT_DIR$/megaPlayListXXX.web/scripts/libs/underscore/underscore.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/megaPlayListXXX.web/scripts/main.js" afterPath="$PROJECT_DIR$/megaPlayListXXX.web/scripts/main.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/megaPlayListXXX.web/scripts/mainBackground.js" afterPath="$PROJECT_DIR$/megaPlayListXXX.web/scripts/mainBackground.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/megaPlayListXXX.web/scripts/modules/mediaplayer - Copy/bah.html" afterPath="$PROJECT_DIR$/megaPlayListXXX.web/scripts/modules/mediaplayer - Copy/bah.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/megaPlayListXXX.web/scripts/modules/mediaplayer - Copy/jwplayer.js" afterPath="$PROJECT_DIR$/megaPlayListXXX.web/scripts/modules/mediaplayer - Copy/jwplayer.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/megaPlayListXXX.web/scripts/modules/mediaplayer - Copy/readme.html" afterPath="$PROJECT_DIR$/megaPlayListXXX.web/scripts/modules/mediaplayer - Copy/readme.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/megaPlayListXXX.web/scripts/modules/mediaplayer/bah.html" afterPath="$PROJECT_DIR$/megaPlayListXXX.web/scripts/modules/mediaplayer/bah.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/megaPlayListXXX.web/scripts/modules/mediaplayer/jwplayer - Copy.js" afterPath="$PROJECT_DIR$/megaPlayListXXX.web/scripts/modules/mediaplayer/jwplayer - Copy.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/megaPlayListXXX.web/scripts/modules/mediaplayer/jwplayer.js" afterPath="$PROJECT_DIR$/megaPlayListXXX.web/scripts/modules/mediaplayer/jwplayer.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/megaPlayListXXX.web/scripts/modules/mediaplayer/readme.html" afterPath="$PROJECT_DIR$/megaPlayListXXX.web/scripts/modules/mediaplayer/readme.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/megaPlayListXXX.web/scripts/modules/order.js" afterPath="$PROJECT_DIR$/megaPlayListXXX.web/scripts/modules/order.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/megaPlayListXXX.web/scripts/modules/scrollbar/css/style.css" afterPath="$PROJECT_DIR$/megaPlayListXXX.web/scripts/modules/scrollbar/css/style.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/megaPlayListXXX.web/scripts/modules/scrollbar/jquery.mCustomScrollbar.js" afterPath="$PROJECT_DIR$/megaPlayListXXX.web/scripts/modules/scrollbar/jquery.mCustomScrollbar.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/megaPlayListXXX.web/scripts/modules/text.js" afterPath="$PROJECT_DIR$/megaPlayListXXX.web/scripts/modules/text.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/megaPlayListXXX.web/scripts/player/Domain.js" afterPath="$PROJECT_DIR$/megaPlayListXXX.web/scripts/player/Domain.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/megaPlayListXXX.web/scripts/player/UI.js" afterPath="$PROJECT_DIR$/megaPlayListXXX.web/scripts/player/UI.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/megaPlayListXXX.web/scripts/require.js" afterPath="$PROJECT_DIR$/megaPlayListXXX.web/scripts/require.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/megaPlayListXXX.web/templates/css/player.css" afterPath="$PROJECT_DIR$/megaPlayListXXX.web/templates/css/player.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/megaPlayListXXX.web/templates/html/Layout_Player.html" afterPath="$PROJECT_DIR$/megaPlayListXXX.web/templates/html/Layout_Player.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/megaPlayListXXX.web/templates/html/Template_PlayListSongItem.html" afterPath="$PROJECT_DIR$/megaPlayListXXX.web/templates/html/Template_PlayListSongItem.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/megaPlayListXXX.web/templates/html/Template_PlaylistItem.html" afterPath="$PROJECT_DIR$/megaPlayListXXX.web/templates/html/Template_PlaylistItem.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/megaPlayListXXX.web/templates/html/Template_SongItem.html" afterPath="$PROJECT_DIR$/megaPlayListXXX.web/templates/html/Template_SongItem.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/megaPlayListXXX/background.js" afterPath="$PROJECT_DIR$/megaPlayListXXX/background.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/megaPlayListXXX/extension.js" afterPath="$PROJECT_DIR$/megaPlayListXXX/extension.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/megaPlayListXXX/resources.background/assets/base.class.js" afterPath="$PROJECT_DIR$/megaPlayListXXX/resources.background/assets/base.class.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/megaPlayListXXX/resources.background/assets/jquery.1.7.2.js" afterPath="$PROJECT_DIR$/megaPlayListXXX/resources.background/assets/jquery.1.7.2.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/megaPlayListXXX/resources.background/playlist.background.js" afterPath="$PROJECT_DIR$/megaPlayListXXX/resources.background/playlist.background.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/megaPlayListXXX/resources.background/playlist.config.js" afterPath="$PROJECT_DIR$/megaPlayListXXX/resources.background/playlist.config.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/megaPlayListXXX/resources.background/playlist.global.js" afterPath="$PROJECT_DIR$/megaPlayListXXX/resources.background/playlist.global.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/megaPlayListXXX/resources.background/playlist.router.js" afterPath="$PROJECT_DIR$/megaPlayListXXX/resources.background/playlist.router.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/megaPlayListXXX/resources/scripts/assets/base.class.js" afterPath="$PROJECT_DIR$/megaPlayListXXX/resources/scripts/assets/base.class.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/megaPlayListXXX/resources/scripts/assets/jquery.ui.position.js" afterPath="$PROJECT_DIR$/megaPlayListXXX/resources/scripts/assets/jquery.ui.position.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/megaPlayListXXX/resources/scripts/playlist.config.js" afterPath="$PROJECT_DIR$/megaPlayListXXX/resources/scripts/playlist.config.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/megaPlayListXXX/resources/scripts/playlist.database.js" afterPath="$PROJECT_DIR$/megaPlayListXXX/resources/scripts/playlist.database.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/megaPlayListXXX/resources/scripts/playlist.js" afterPath="$PROJECT_DIR$/megaPlayListXXX/resources/scripts/playlist.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/megaPlayListXXX/resources/scripts/playlist.messages.js" afterPath="$PROJECT_DIR$/megaPlayListXXX/resources/scripts/playlist.messages.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/megaPlayListXXX/resources/scripts/playlist.router.js" afterPath="$PROJECT_DIR$/megaPlayListXXX/resources/scripts/playlist.router.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/megaPlayListXXX/resources/scripts/song.managers/manager.js" afterPath="$PROJECT_DIR$/megaPlayListXXX/resources/scripts/song.managers/manager.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/megaPlayListXXX/resources/scripts/song.managers/manager.youtube.js" afterPath="$PROJECT_DIR$/megaPlayListXXX/resources/scripts/song.managers/manager.youtube.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/megaPlayListXXX/resources/styles/manager.css" afterPath="$PROJECT_DIR$/megaPlayListXXX/resources/styles/manager.css" />
+    </list>
+    <ignored path="megaPlayList.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="DaemonCodeAnalyzer">
+    <disable_hints />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="megaPlayList" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="Layout_Player.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/megaPlayListXXX.web/templates/html/Layout_Player.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="54" column="32" selection-start="1699" selection-end="1699" vertical-scroll-proportion="-9.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UI.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/megaPlayListXXX.web/scripts/player/UI.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="227" column="26" selection-start="5915" selection-end="5915" vertical-scroll-proportion="0.6332547">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Domain.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/megaPlayListXXX.web/scripts/player/Domain.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="338" column="16" selection-start="7272" selection-end="7272" vertical-scroll-proportion="-21.12">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AppBackground.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/megaPlayListXXX.web/scripts/AppBackground.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="76" column="49" selection-start="1860" selection-end="1860" vertical-scroll-proportion="-17.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="playlist.global.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/megaPlayListXXX/resources.background/playlist.global.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="145" column="10" selection-start="4592" selection-end="4592" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="player.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/megaPlayListXXX.web/templates/css/player.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="609" column="63" selection-start="13105" selection-end="13105" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindManager">
+    <FindUsagesManager>
+      <setting name="OPEN_NEW_TAB" value="false" />
+    </FindUsagesManager>
+  </component>
+  <component name="Git.Settings">
+    <option name="CHECKOUT_INCLUDE_TAGS" value="false" />
+    <option name="UPDATE_CHANGES_POLICY" value="STASH" />
+    <option name="LINE_SEPARATORS_CONVERSION" value="ASK" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="changedFiles">
+      <list>
+        <option value="$PROJECT_DIR$/megaPlayListXXX.web/templates/html/Layout_Player.html" />
+        <option value="$PROJECT_DIR$/megaPlayListXXX.web/scripts/AppBackground.js" />
+        <option value="$PROJECT_DIR$/megaPlayListXXX/resources.background/playlist.global.js" />
+        <option value="$PROJECT_DIR$/megaPlayListXXX.web/templates/css/player.css" />
+        <option value="$PROJECT_DIR$/megaPlayListXXX.web/scripts/player/Domain.js" />
+        <option value="$PROJECT_DIR$/megaPlayListXXX.web/scripts/player/UI.js" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectReloadState">
+    <option name="STATE" value="0" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1" splitterProportion="0.5">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents ProjectPane="false" />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="megaPlayList" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="megaPlayList" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="megaPlayListXXX.web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="megaPlayList" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="megaPlayList" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="megaPlayListXXX.web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="megaPlayList" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="megaPlayList" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="megaPlayListXXX" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="megaPlayList" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="megaPlayList" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="megaPlayListXXX" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources.background" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="JavascriptDebugSession" factoryName="Local">
+      <JSDebuggerConfigurationSettings>
+        <option name="engineId" />
+        <option name="fileUrl" />
+      </JSDebuggerConfigurationSettings>
+      <method />
+    </configuration>
+    <list size="0" />
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SvnConfiguration" maxAnnotateRevisions="500">
+    <option name="USER" value="" />
+    <option name="PASSWORD" value="" />
+    <option name="mySSHConnectionTimeout" value="30000" />
+    <option name="mySSHReadTimeout" value="30000" />
+    <option name="LAST_MERGED_REVISION" />
+    <option name="MERGE_DRY_RUN" value="false" />
+    <option name="MERGE_DIFF_USE_ANCESTRY" value="true" />
+    <option name="UPDATE_LOCK_ON_DEMAND" value="false" />
+    <option name="IGNORE_SPACES_IN_MERGE" value="false" />
+    <option name="DETECT_NESTED_COPIES" value="true" />
+    <option name="CHECK_NESTED_FOR_QUICK_MERGE" value="false" />
+    <option name="IGNORE_SPACES_IN_ANNOTATE" value="true" />
+    <option name="SHOW_MERGE_SOURCES_IN_ANNOTATE" value="true" />
+    <option name="FORCE_UPDATE" value="false" />
+    <configuration useDefault="false">C:\Users\Moti\AppData\Roaming\Subversion</configuration>
+    <myIsUseDefaultProxy>false</myIsUseDefaultProxy>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="797085c8-ca24-43f9-bb69-32859e1f8412" name="Default" comment="" />
+      <created>1344598987391</created>
+      <updated>1344598987391</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19820769" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="JsTestDriver Server" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="true" />
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="CHECK_NEW_TODO" value="true" />
+    <option name="myTodoPanelSettings">
+      <value>
+        <are-packages-shown value="false" />
+        <are-modules-shown value="false" />
+        <flatten-packages value="false" />
+        <is-autoscroll-to-source value="false" />
+      </value>
+    </option>
+    <option name="PERFORM_UPDATE_IN_BACKGROUND" value="true" />
+    <option name="PERFORM_COMMIT_IN_BACKGROUND" value="true" />
+    <option name="PERFORM_EDIT_IN_BACKGROUND" value="true" />
+    <option name="PERFORM_CHECKOUT_IN_BACKGROUND" value="true" />
+    <option name="PERFORM_ADD_REMOVE_IN_BACKGROUND" value="true" />
+    <option name="PERFORM_ROLLBACK_IN_BACKGROUND" value="false" />
+    <option name="CHECK_LOCALLY_CHANGED_CONFLICTS_IN_BACKGROUND" value="false" />
+    <option name="ENABLE_BACKGROUND_PROCESSES" value="false" />
+    <option name="CHANGED_ON_SERVER_INTERVAL" value="60" />
+    <option name="SHOW_ONLY_CHANGED_IN_SELECTION_DIFF" value="true" />
+    <option name="CHECK_COMMIT_MESSAGE_SPELLING" value="true" />
+    <option name="DEFAULT_PATCH_EXTENSION" value="patch" />
+    <option name="SHORT_DIFF_HORISONTALLY" value="true" />
+    <option name="SHORT_DIFF_EXTRA_LINES" value="2" />
+    <option name="SOFT_WRAPS_IN_SHORT_DIFF" value="true" />
+    <option name="INCLUDE_TEXT_INTO_PATCH" value="false" />
+    <option name="INCLUDE_TEXT_INTO_SHELF" value="false" />
+    <option name="CREATE_PATCH_EXPAND_DETAILS_DEFAULT" value="true" />
+    <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
+    <option name="LAST_COMMIT_MESSAGE" />
+    <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
+    <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
+    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="REFORMAT_BEFORE_FILE_COMMIT" value="false" />
+    <option name="FILE_HISTORY_DIALOG_COMMENTS_SPLITTER_PROPORTION" value="0.8" />
+    <option name="FILE_HISTORY_DIALOG_SPLITTER_PROPORTION" value="0.5" />
+    <option name="ACTIVE_VCS_NAME" />
+    <option name="UPDATE_GROUP_BY_PACKAGES" value="false" />
+    <option name="UPDATE_GROUP_BY_CHANGELIST" value="false" />
+    <option name="SHOW_FILE_HISTORY_AS_TREE" value="false" />
+    <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/megaPlayListXXX.web/templates/images/icons/close.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/megaPlayListXXX.web/templates/images/icons/settings.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/megaPlayListXXX.web/templates/images/player-bar/controllers/play.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/megaPlayListXXX.web/templates/images/player-bar/controllers/shuffle.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/megaPlayListXXX/background.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/megaPlayListXXX/resources.background/playlist.background.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/megaPlayListXXX/resources.background/playlist.router.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/megaPlayListXXX.web/templates/html/Layout_Player.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="54" column="32" selection-start="1699" selection-end="1699" vertical-scroll-proportion="-9.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/megaPlayListXXX.web/scripts/AppBackground.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="76" column="49" selection-start="1860" selection-end="1860" vertical-scroll-proportion="-17.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/megaPlayListXXX/resources.background/playlist.global.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="145" column="10" selection-start="4592" selection-end="4592" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/megaPlayListXXX.web/templates/css/player.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="609" column="63" selection-start="13105" selection-end="13105" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/megaPlayListXXX.web/scripts/player/Domain.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="338" column="16" selection-start="7272" selection-end="7272" vertical-scroll-proportion="-21.12">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/megaPlayListXXX.web/scripts/player/UI.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="227" column="26" selection-start="5915" selection-end="5915" vertical-scroll-proportion="0.6332547">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
+

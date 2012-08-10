@@ -4,6 +4,7 @@ MegaPlayListXXX.GlobalObject = (function ($) {
 		actionsRouter,
 		globalObject = {
 			hasLoaded: false, // used to check if we need to sync or return the object
+            state: "Idle", // Idle,Paused,Playing,Buffering
 			windowIsOpen: false, // used to check if the player window is open or close
 			Playlist: {}, // getPlayListFromDB()
 			PlayBar: {
@@ -105,7 +106,7 @@ MegaPlayListXXX.GlobalObject = (function ($) {
 			}
 
 			
-
+            var bFromPaused = globalObject.state == "Paused" && oPlayBar.selectedIndex == iSongIndex;
 			oPlayBar.selectedIndex = iSongIndex;
 			song = globalObject.PlayBar.songs[iSongIndex];
 
@@ -114,13 +115,25 @@ MegaPlayListXXX.GlobalObject = (function ($) {
 			if (song.source.type == "youtube")
 			{
 				//alert(song.source.model.href);
-				actionsRouter.sendMessageToBackgroundIframe(this,song.source.model.href);
+                var sEvent = this;
+                setTimeout(function() {
+				actionsRouter.sendMessageToBackgroundIframe(sEvent,song.source.model.href);
+                },1);
 			}
-			
 
-			
-		
-		}
+            return {
+                fromPaused: bFromPaused
+            }
+		},
+        "onPause": function() {
+            globalObject.state = "Paused";
+        },
+        "toggleRepeat": function() {
+            globalObject.PlayBar.controllersState.playListOptions.repeat = !globalObject.PlayBar.controllersState.playListOptions.repeat;
+        },
+        "toggleShuffle": function() {
+            globalObject.PlayBar.controllersState.playListOptions.shuffle = !globalObject.PlayBar.controllersState.playListOptions.shuffle;
+        }
 	};
 
 	return Class.extend({
@@ -161,7 +174,7 @@ MegaPlayListXXX.GlobalObject = (function ($) {
 								{id: 499, playListId: 1, name: "Suprise Mother Fucker!!", source: {type: "youtube", model: {href: "http://www.youtube.com/watch?v=5CfNarCjSHM&feature=related"}}},
 								{id: 500, playListId: 1, name: "CRBL feat. Helen - KBoom (Radio Edit)", source: {type: "youtube", model: {href: "http://www.youtube.com/watch?v=0Sy3J7O5bxM"}}},
 								{id: 501, playListId: 1, name: "BALADA BOA GUSTTAVO LIMA NOVO DVD", source: {type: "youtube", model: {href: "http://www.youtube.com/watch?v=5NNi4JIwsCo&feature=related"}}},
-								{id: 502, playListId: 1, name: "Euphoria", source: {type: "youtube", model: {href: "http://www.youtube.com/watch?v=t5qURKt4maw"}}},
+								{id: 502, playListId: 1, name: "Euphoria", source: {type: "youtube", model: {href: "http://www.youtube.com/watch?v=t5qURKt4maw"}}}
 							],
 							hasSongs: true
 						}

@@ -6,6 +6,7 @@
 		onPlayListRemoved
 		onPlay
 		onSyncDone
+        onPause
 */
 define(['jQuery','Class','Helpers'], function($,Class,Helpers) {
 
@@ -31,6 +32,10 @@ define(['jQuery','Class','Helpers'], function($,Class,Helpers) {
 			getList: function() {
 				return globalObject.Playlist;
 			},
+
+            getPlayBar: function() {
+                return globalObject.PlayBar;
+            },
 
 			getPlayListById: function(iPlayListId) {
 				var oPlayList;
@@ -213,12 +218,24 @@ define(['jQuery','Class','Helpers'], function($,Class,Helpers) {
 			},
 
 			stop: function() {
-
+                sendToBackgroundFrame("stop");
 			},
+
+            pause: function() {
+                sendToBackgroundFrame("pause");
+            },
 
 			addPlayListToPlayBar: function(iPlayListId) {
 				updateGlobalObject("addPlayListToPlayBar",{iPlayListId:iPlayListId});
 			},
+
+            toggleRepeat: function() {
+                updateGlobalObject("toggleRepeat");
+            },
+
+            toggleShuffle: function() {
+                updateGlobalObject("toggleShuffle");
+            },
 
 		// Extension Callbacks
 
@@ -251,16 +268,26 @@ define(['jQuery','Class','Helpers'], function($,Class,Helpers) {
 					"onComplete": function() {
 						This.events.fire("onComplete");
 					},
+                    "onPause": function() {
+                        This.events.fire("onPause");
+                    },
 					"addPlayListToPlayBar": function(model) {
 						This.events.fire("onPlayBarUpdate",model.returnObject);
 						// aaaaaaaaaaa
 					},
-					"play": function() {
+					"play": function(model) {
 						This.events.fire("onPlay",{
 							index: globalObject.PlayBar.selectedIndex,
-							song: globalObject.PlayBar.songs[globalObject.PlayBar.selectedIndex]
+							song: globalObject.PlayBar.songs[globalObject.PlayBar.selectedIndex],
+                            fromPaused: model.returnObject.fromPaused
 						});
-					}
+					},
+                    "toggleRepeat": function() {
+                        UpdateControllerModeState();
+                    },
+                    "toggleShuffle": function(){
+                        UpdateControllerModeState();
+                    }
 				}
 			},
 
@@ -306,6 +333,14 @@ define(['jQuery','Class','Helpers'], function($,Class,Helpers) {
 			}
 			*/
 		//}
+
+        function UpdateControllerModeState() {
+
+            This.events.fire("onControllerModeChanged",{
+                repeat: globalObject.PlayBar.controllersState.playListOptions.repeat,
+                shuffle: globalObject.PlayBar.controllersState.playListOptions.shuffle
+            })
+        }
 
 
 

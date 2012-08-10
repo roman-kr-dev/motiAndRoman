@@ -29,6 +29,10 @@ define(['jQuery','Class','Helpers','Template','player/domain'], function($,Class
 				progressBuffer: null,
 
 			// controller area
+                controllers: null,
+                playPauseButton: null,
+                repeatButton: null,
+                shuffleButton: null,
 
 			// current song info area
 				currentSongThumbnail: null,
@@ -60,7 +64,11 @@ define(['jQuery','Class','Helpers','Template','player/domain'], function($,Class
 						domain.events.add("onBufferChange", Domain_BufferChange);
 						domain.events.add("onTimeUpdate", Domain_TimeUpdate);
 						domain.events.add("onComplete", Domain_SongComplete);
-						domain.events.add("onPlayBarUpdate", Domain_PlayBarUpdate);
+                        domain.events.add("onPlayBarUpdate", Domain_PlayBarUpdate);
+                        domain.events.add("onPause", Domain_SongPause);
+                        domain.events.add("onControllerModeChanged", Domain_ControllerModeChanged);
+
+
 						domain.start();
 					},
 					function(f) {
@@ -112,9 +120,6 @@ define(['jQuery','Class','Helpers','Template','player/domain'], function($,Class
 			$.extend(settings,options);
 
 			domain.play(settings);
-
-
-
 		},
 
 		stop: function() {
@@ -192,14 +197,40 @@ define(['jQuery','Class','Helpers','Template','player/domain'], function($,Class
 
 		var song = model.song;
 
-		elements.progressFill.css("width","0%");
-		elements.progressBuffer.css("width","0%");
+        if (!model.fromPaused) {
+		    elements.progressFill.css("width","0%");
+		    elements.progressBuffer.css("width","0%");
+        }
 
 		elements.songsList.find("li.song-item").removeClass("selected").filter(":eq("+model.index+")").addClass("selected");
 		elements.currentSongThumbnail.attr("src", song.thumbnail || config.images.defaultSongCover);
 		elements.currentSongName.html(song.name);
 
+        elements.playPauseButton.removeClass("ico-play").removeClass("disabled").addClass("ico-pause");
+
 	}
+
+    function Domain_ControllerModeChanged(model) {
+
+
+
+        var buttons = {
+            "repeat": elements.repeatButton,
+            "shuffle": elements.shuffleButton
+        }
+
+        $.each(buttons, function(key) {
+            buttons[key].removeClass("selected");
+        });
+
+        $.each(model, function(key) {
+
+            if (model[key]) {
+                buttons[key].addClass("selected");
+            }
+        });
+
+    }
 
 	function Domain_BufferChange(bufferPercent) {
 		elements.progressBuffer.css("width",bufferPercent + "%");
@@ -237,6 +268,10 @@ define(['jQuery','Class','Helpers','Template','player/domain'], function($,Class
 		},30);
 
 	}
+
+    function Domain_SongPause() {
+        elements.playPauseButton.removeClass("ico-pause").addClass("ico-play");
+    }
 
 	function Domain_PlayBarUpdate(songs) {
 
@@ -356,7 +391,14 @@ define(['jQuery','Class','Helpers','Template','player/domain'], function($,Class
 					autoExpandHorizontalScroll: true
 				}
 			});*/
-		
+
+        // Controllers area
+
+            elements.controllers = $(".controllers");
+
+            elements.playPauseButton = elements.controllers.find(".ico-play");
+            elements.repeatButton = elements.controllers.find(".ico-repeat");
+            elements.shuffleButton = elements.controllers.find(".ico-shuffle");
 
 		// Templates
 			templates = {};
@@ -405,7 +447,6 @@ define(['jQuery','Class','Helpers','Template','player/domain'], function($,Class
 			var oLI = $(oEl).is("li") ? $(oEl) : $(oEl).parents("LI:first");
 			return oLI.parent().children().index(oLI);
 		}
-
 
 		// Events of player
 
@@ -483,7 +524,7 @@ define(['jQuery','Class','Helpers','Template','player/domain'], function($,Class
 
 			// play song
 
-				elements.songsList.find("li.song-item").live("click", function() {
+				elements.songsList.find("li.song-item").live("mousedown", function() {
 
 					var iIndex = getSongIndex(this);
 					
@@ -503,7 +544,32 @@ define(['jQuery','Class','Helpers','Template','player/domain'], function($,Class
 					This.removeSongFromPlayBar(index);
 				});
 			
-		
+		// Events of controllers area
+
+            elements.playPauseButton.bind("click", function() {
+
+                var oEl = $(this);
+
+                if (oEl.hasClass("disabled"))
+                    return;
+
+                if (oEl.hasClass("ico-play")) {
+                    var oPlayBar = domain.getPlayBar();
+                    This.play({index: oPlayBar.selectedIndex > -1 ? oPlayBar.selectedIndex : 0})
+                } else if (oEl.hasClass("ico-pause")) {
+                    domain.pause();
+                }
+
+            });
+
+            elements.repeatButton.bind("click",function(){
+               domain.toggleRepeat();
+            });
+
+            elements.shuffleButton.bind("click",function(){
+                domain.toggleShuffle();
+            });
+
 	}
 
 	

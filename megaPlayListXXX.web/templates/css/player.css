@@ -531,7 +531,15 @@ body {
 				display:inline-block;
 				height:19px;
 				margin-top:7px;
+                cursor: pointer;
 			}
+
+            .IPlayer .footer .controllers .icon.disabled {
+                -moz-opacity:.50;
+                filter:alpha(opacity=50);
+                opacity:.50;
+                cursor: default;
+            }
 
 			.IPlayer .footer .controllers .button {
 				cursor:pointer;
@@ -557,7 +565,7 @@ body {
 				.IPlayer .footer .controllers .box .c {
 					background:url(../images/player-bar/controllers/box-repeater.png);
 					text-align:right;
-					width:145px;
+					width:200px;
 				}
 
 				.IPlayer .footer .controllers .box .r {
@@ -569,7 +577,39 @@ body {
 				width:13px;
 				margin-right:9px;
 				background:url(../images/player-bar/controllers/play.png) no-repeat;
+                margin-left:3px;
 			}
+
+            .IPlayer .footer .controllers .ico-pause {
+                width:13px;
+                margin-right:9px;
+                background:url(../images/player-bar/controllers/pause.png) no-repeat;
+                margin-left:3px;
+            }
+
+            .IPlayer .footer .controllers .ico-repeat {
+                width:26px;
+                height:26px;
+                vertical-align:top;
+                margin-top:3px;
+                background:url(../images/player-bar/controllers/repeat.png) no-repeat;
+            }
+
+            .IPlayer .footer .controllers .ico-repeat.selected {
+                background-image:url(../images/player-bar/controllers/repeat-hover.png);
+            }
+
+            .IPlayer .footer .controllers .ico-shuffle {
+                width:25px;
+                height:27px;
+                vertical-align:top;
+                margin-top:3px;
+                background:url(../images/player-bar/controllers/shuffle.png) no-repeat;
+            }
+
+            .IPlayer .footer .controllers .ico-shuffle.selected {
+                background-image:url(../images/player-bar/controllers/shuffle-hover.png);
+            }
 
 			.IPlayer .footer .controllers  .loudspeaker {
 				float:right;

@@ -28,11 +28,23 @@ define(
 				elements.player.stop();
 			},
 
+            pause: function(model) {
+                elements.player.pause(true);
+            },
+
 			// actions
 
 			play: function(src) {
-				elements.player.load({file: src});
-				elements.player.play(true);
+
+                var oPlayList = elements.player.getPlaylist()[0];
+                if (elements.player.getState() == "PAUSED" && oPlayList.file == src) {
+                    elements.player.pause(false); // resume
+                } else {
+                    elements.player.load({file: src});
+                    elements.player.play(true);
+                }
+
+
 
 			}
 		});
@@ -69,8 +81,11 @@ define(
 						updateGlobalObject("onTimeUpdate",{duration:e.duration,position:e.position})
 					},
 					onComplete: function(e) {
-						updateGlobalObject("onComplete")
-					}
+						updateGlobalObject("onComplete");
+					},
+                    onPause: function(e) {
+                        updateGlobalObject("onPause");
+                    }
 				}
 			});
 
@@ -89,6 +104,8 @@ define(
 				messageRegExp = /^MegaPlayListXXX\.(.*)/;
 		
 			window.addEventListener('message', function(e){
+
+
 
 				if (originRegExp.test(e.origin) && messageRegExp.test(e.data.action)) {
 					var sAction = RegExp.$1;
