@@ -2,70 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="797085c8-ca24-43f9-bb69-32859e1f8412" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/megaPlayListXXX.web/scripts/modules/mediaplayer - Copy/web.config" afterPath="$PROJECT_DIR$/megaPlayListXXX.web/scripts/modules/mediaplayer - Copy/web.config" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/megaPlayListXXX.web/scripts/modules/mediaplayer/web.config" afterPath="$PROJECT_DIR$/megaPlayListXXX.web/scripts/modules/mediaplayer/web.config" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/megaPlayListXXX.web/templates/images/player-bar/controllers/repeat.png" afterPath="$PROJECT_DIR$/megaPlayListXXX.web/templates/images/player-bar/controllers/repeat.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/megaPlayListXXX.web/templates/images/player-bar/controllers/shuffle.png" afterPath="$PROJECT_DIR$/megaPlayListXXX.web/templates/images/player-bar/controllers/shuffle.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/megaPlayListXXX/background.php" afterPath="$PROJECT_DIR$/megaPlayListXXX/background.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/megaPlayListXXX.web/player.background.html" afterPath="$PROJECT_DIR$/megaPlayListXXX.web/player.background.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/megaPlayListXXX.web/player.html" afterPath="$PROJECT_DIR$/megaPlayListXXX.web/player.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/megaPlayListXXX.web/scripts/App.js" afterPath="$PROJECT_DIR$/megaPlayListXXX.web/scripts/App.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/megaPlayListXXX.web/scripts/AppBackground.js" afterPath="$PROJECT_DIR$/megaPlayListXXX.web/scripts/AppBackground.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/megaPlayListXXX.web/scripts/library/base.class.js" afterPath="$PROJECT_DIR$/megaPlayListXXX.web/scripts/library/base.class.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/megaPlayListXXX.web/scripts/library/helpers.js" afterPath="$PROJECT_DIR$/megaPlayListXXX.web/scripts/library/helpers.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/megaPlayListXXX.web/scripts/library/jquery.mousewheel.min.js" afterPath="$PROJECT_DIR$/megaPlayListXXX.web/scripts/library/jquery.mousewheel.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/megaPlayListXXX.web/scripts/library/jquery.outerhtml.js" afterPath="$PROJECT_DIR$/megaPlayListXXX.web/scripts/library/jquery.outerhtml.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/megaPlayListXXX.web/scripts/library/template.js" afterPath="$PROJECT_DIR$/megaPlayListXXX.web/scripts/library/template.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/megaPlayListXXX.web/scripts/libs/backbone/backbone-min.js" afterPath="$PROJECT_DIR$/megaPlayListXXX.web/scripts/libs/backbone/backbone-min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/megaPlayListXXX.web/scripts/libs/backbone/backbone.js" afterPath="$PROJECT_DIR$/megaPlayListXXX.web/scripts/libs/backbone/backbone.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/megaPlayListXXX.web/scripts/libs/base.class/base.class.js" afterPath="$PROJECT_DIR$/megaPlayListXXX.web/scripts/libs/base.class/base.class.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/megaPlayListXXX.web/scripts/libs/helpers/helpers.js" afterPath="$PROJECT_DIR$/megaPlayListXXX.web/scripts/libs/helpers/helpers.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/megaPlayListXXX.web/scripts/libs/jquery/jquery-min.js" afterPath="$PROJECT_DIR$/megaPlayListXXX.web/scripts/libs/jquery/jquery-min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/megaPlayListXXX.web/scripts/libs/jquery/jquery.js" afterPath="$PROJECT_DIR$/megaPlayListXXX.web/scripts/libs/jquery/jquery.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/megaPlayListXXX.web/scripts/libs/loader.js" afterPath="$PROJECT_DIR$/megaPlayListXXX.web/scripts/libs/loader.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/megaPlayListXXX.web/scripts/libs/mustache/mustache.min.js" afterPath="$PROJECT_DIR$/megaPlayListXXX.web/scripts/libs/mustache/mustache.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/megaPlayListXXX.web/scripts/libs/template/template.js" afterPath="$PROJECT_DIR$/megaPlayListXXX.web/scripts/libs/template/template.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/megaPlayListXXX.web/scripts/libs/underscore/underscore-min.js" afterPath="$PROJECT_DIR$/megaPlayListXXX.web/scripts/libs/underscore/underscore-min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/megaPlayListXXX.web/scripts/libs/underscore/underscore.js" afterPath="$PROJECT_DIR$/megaPlayListXXX.web/scripts/libs/underscore/underscore.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/megaPlayListXXX.web/scripts/main.js" afterPath="$PROJECT_DIR$/megaPlayListXXX.web/scripts/main.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/megaPlayListXXX.web/scripts/mainBackground.js" afterPath="$PROJECT_DIR$/megaPlayListXXX.web/scripts/mainBackground.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/megaPlayListXXX.web/scripts/modules/mediaplayer - Copy/bah.html" afterPath="$PROJECT_DIR$/megaPlayListXXX.web/scripts/modules/mediaplayer - Copy/bah.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/megaPlayListXXX.web/scripts/modules/mediaplayer - Copy/jwplayer.js" afterPath="$PROJECT_DIR$/megaPlayListXXX.web/scripts/modules/mediaplayer - Copy/jwplayer.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/megaPlayListXXX.web/scripts/modules/mediaplayer - Copy/readme.html" afterPath="$PROJECT_DIR$/megaPlayListXXX.web/scripts/modules/mediaplayer - Copy/readme.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/megaPlayListXXX.web/scripts/modules/mediaplayer/bah.html" afterPath="$PROJECT_DIR$/megaPlayListXXX.web/scripts/modules/mediaplayer/bah.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/megaPlayListXXX.web/scripts/modules/mediaplayer/jwplayer - Copy.js" afterPath="$PROJECT_DIR$/megaPlayListXXX.web/scripts/modules/mediaplayer/jwplayer - Copy.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/megaPlayListXXX.web/scripts/modules/mediaplayer/jwplayer.js" afterPath="$PROJECT_DIR$/megaPlayListXXX.web/scripts/modules/mediaplayer/jwplayer.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/megaPlayListXXX.web/scripts/modules/mediaplayer/readme.html" afterPath="$PROJECT_DIR$/megaPlayListXXX.web/scripts/modules/mediaplayer/readme.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/megaPlayListXXX.web/scripts/modules/order.js" afterPath="$PROJECT_DIR$/megaPlayListXXX.web/scripts/modules/order.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/megaPlayListXXX.web/scripts/modules/scrollbar/css/style.css" afterPath="$PROJECT_DIR$/megaPlayListXXX.web/scripts/modules/scrollbar/css/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/megaPlayListXXX.web/scripts/modules/scrollbar/jquery.mCustomScrollbar.js" afterPath="$PROJECT_DIR$/megaPlayListXXX.web/scripts/modules/scrollbar/jquery.mCustomScrollbar.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/megaPlayListXXX.web/scripts/modules/text.js" afterPath="$PROJECT_DIR$/megaPlayListXXX.web/scripts/modules/text.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/megaPlayListXXX.web/scripts/player/Domain.js" afterPath="$PROJECT_DIR$/megaPlayListXXX.web/scripts/player/Domain.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/megaPlayListXXX.web/scripts/player/UI.js" afterPath="$PROJECT_DIR$/megaPlayListXXX.web/scripts/player/UI.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/megaPlayListXXX.web/scripts/require.js" afterPath="$PROJECT_DIR$/megaPlayListXXX.web/scripts/require.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/megaPlayListXXX.web/templates/css/player.css" afterPath="$PROJECT_DIR$/megaPlayListXXX.web/templates/css/player.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/megaPlayListXXX.web/templates/html/Layout_Player.html" afterPath="$PROJECT_DIR$/megaPlayListXXX.web/templates/html/Layout_Player.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/megaPlayListXXX.web/templates/html/Template_PlayListSongItem.html" afterPath="$PROJECT_DIR$/megaPlayListXXX.web/templates/html/Template_PlayListSongItem.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/megaPlayListXXX.web/templates/html/Template_PlaylistItem.html" afterPath="$PROJECT_DIR$/megaPlayListXXX.web/templates/html/Template_PlaylistItem.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/megaPlayListXXX.web/templates/html/Template_SongItem.html" afterPath="$PROJECT_DIR$/megaPlayListXXX.web/templates/html/Template_SongItem.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/megaPlayListXXX/background.js" afterPath="$PROJECT_DIR$/megaPlayListXXX/background.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/megaPlayListXXX/extension.js" afterPath="$PROJECT_DIR$/megaPlayListXXX/extension.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/megaPlayListXXX/resources.background/assets/base.class.js" afterPath="$PROJECT_DIR$/megaPlayListXXX/resources.background/assets/base.class.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/megaPlayListXXX/resources.background/assets/jquery.1.7.2.js" afterPath="$PROJECT_DIR$/megaPlayListXXX/resources.background/assets/jquery.1.7.2.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/megaPlayListXXX/resources.background/playlist.background.js" afterPath="$PROJECT_DIR$/megaPlayListXXX/resources.background/playlist.background.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/megaPlayListXXX/resources.background/playlist.config.js" afterPath="$PROJECT_DIR$/megaPlayListXXX/resources.background/playlist.config.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/megaPlayListXXX/resources.background/playlist.global.js" afterPath="$PROJECT_DIR$/megaPlayListXXX/resources.background/playlist.global.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/megaPlayListXXX/resources.background/playlist.router.js" afterPath="$PROJECT_DIR$/megaPlayListXXX/resources.background/playlist.router.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/megaPlayListXXX/resources/scripts/assets/base.class.js" afterPath="$PROJECT_DIR$/megaPlayListXXX/resources/scripts/assets/base.class.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/megaPlayListXXX/resources/scripts/assets/jquery.ui.position.js" afterPath="$PROJECT_DIR$/megaPlayListXXX/resources/scripts/assets/jquery.ui.position.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/megaPlayListXXX/resources/scripts/playlist.config.js" afterPath="$PROJECT_DIR$/megaPlayListXXX/resources/scripts/playlist.config.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/megaPlayListXXX/resources/scripts/playlist.database.js" afterPath="$PROJECT_DIR$/megaPlayListXXX/resources/scripts/playlist.database.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/megaPlayListXXX/resources/scripts/playlist.js" afterPath="$PROJECT_DIR$/megaPlayListXXX/resources/scripts/playlist.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/megaPlayListXXX/resources/scripts/playlist.messages.js" afterPath="$PROJECT_DIR$/megaPlayListXXX/resources/scripts/playlist.messages.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/megaPlayListXXX/resources/scripts/playlist.router.js" afterPath="$PROJECT_DIR$/megaPlayListXXX/resources/scripts/playlist.router.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/megaPlayListXXX/resources/scripts/song.managers/manager.js" afterPath="$PROJECT_DIR$/megaPlayListXXX/resources/scripts/song.managers/manager.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/megaPlayListXXX/resources/scripts/song.managers/manager.youtube.js" afterPath="$PROJECT_DIR$/megaPlayListXXX/resources/scripts/song.managers/manager.youtube.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/megaPlayListXXX/resources/styles/manager.css" afterPath="$PROJECT_DIR$/megaPlayListXXX/resources/styles/manager.css" />
     </list>
     <ignored path="megaPlayList.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -90,7 +34,7 @@
       <file leaf-file-name="Layout_Player.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/megaPlayListXXX.web/templates/html/Layout_Player.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="54" column="32" selection-start="1699" selection-end="1699" vertical-scroll-proportion="-9.0">
+            <state line="38" column="38" selection-start="1242" selection-end="1256" vertical-scroll-proportion="-7.45098">
               <folding />
             </state>
           </provider>
@@ -99,7 +43,7 @@
       <file leaf-file-name="UI.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/megaPlayListXXX.web/scripts/player/UI.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="227" column="26" selection-start="5915" selection-end="5915" vertical-scroll-proportion="0.6332547">
+            <state line="437" column="68" selection-start="12364" selection-end="12364" vertical-scroll-proportion="0.5389151">
               <folding />
             </state>
           </provider>
@@ -108,7 +52,7 @@
       <file leaf-file-name="Domain.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/megaPlayListXXX.web/scripts/player/Domain.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="338" column="16" selection-start="7272" selection-end="7272" vertical-scroll-proportion="-21.12">
+            <state line="282" column="58" selection-start="6312" selection-end="6312" vertical-scroll-proportion="-13.32">
               <folding />
             </state>
           </provider>
@@ -117,7 +61,7 @@
       <file leaf-file-name="AppBackground.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/megaPlayListXXX.web/scripts/AppBackground.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="76" column="49" selection-start="1860" selection-end="1860" vertical-scroll-proportion="-17.0">
+            <state line="91" column="22" selection-start="2326" selection-end="2326" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -126,7 +70,7 @@
       <file leaf-file-name="playlist.global.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/megaPlayListXXX/resources.background/playlist.global.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="145" column="10" selection-start="4592" selection-end="4592" vertical-scroll-proportion="0.0">
+            <state line="111" column="0" selection-start="3506" selection-end="3506" vertical-scroll-proportion="-20.12">
               <folding />
             </state>
           </provider>
@@ -135,7 +79,7 @@
       <file leaf-file-name="player.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/megaPlayListXXX.web/templates/css/player.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="609" column="63" selection-start="13105" selection-end="13105" vertical-scroll-proportion="0.0">
+            <state line="399" column="32" selection-start="8548" selection-end="8548" vertical-scroll-proportion="-9.24">
               <folding />
             </state>
           </provider>
@@ -156,19 +100,19 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/megaPlayListXXX.web/templates/html/Layout_Player.html" />
         <option value="$PROJECT_DIR$/megaPlayListXXX.web/scripts/AppBackground.js" />
+        <option value="$PROJECT_DIR$/megaPlayListXXX/extension.js" />
         <option value="$PROJECT_DIR$/megaPlayListXXX/resources.background/playlist.global.js" />
-        <option value="$PROJECT_DIR$/megaPlayListXXX.web/templates/css/player.css" />
         <option value="$PROJECT_DIR$/megaPlayListXXX.web/scripts/player/Domain.js" />
+        <option value="$PROJECT_DIR$/megaPlayListXXX.web/templates/html/Layout_Player.html" />
+        <option value="$PROJECT_DIR$/megaPlayListXXX.web/templates/css/player.css" />
         <option value="$PROJECT_DIR$/megaPlayListXXX.web/scripts/player/UI.js" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1936" />
+    <option name="width" value="1932" />
     <option name="height" value="1056" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
@@ -274,7 +218,7 @@
   <component name="RunManager">
     <configuration default="true" type="JavascriptDebugSession" factoryName="Local">
       <JSDebuggerConfigurationSettings>
-        <option name="engineId" />
+        <option name="engineId" value="embedded" />
         <option name="fileUrl" />
       </JSDebuggerConfigurationSettings>
       <method />
@@ -309,13 +253,13 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <frame x="-8" y="0" width="1932" height="1056" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19820769" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.13048072" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -405,65 +349,64 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/megaPlayListXXX/background.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/megaPlayListXXX/resources.background/playlist.background.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/megaPlayListXXX/resources.background/playlist.router.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/megaPlayListXXX.web/templates/html/Layout_Player.html">
+    <entry file="file://$PROJECT_DIR$/megaPlayListXXX/extension.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="54" column="32" selection-start="1699" selection-end="1699" vertical-scroll-proportion="-9.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/megaPlayListXXX.web/scripts/AppBackground.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="76" column="49" selection-start="1860" selection-end="1860" vertical-scroll-proportion="-17.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/megaPlayListXXX/resources.background/playlist.global.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="145" column="10" selection-start="4592" selection-end="4592" vertical-scroll-proportion="0.0">
+        <state line="23" column="6" selection-start="801" selection-end="801" vertical-scroll-proportion="0.44788086">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/megaPlayListXXX.web/templates/css/player.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="609" column="63" selection-start="13105" selection-end="13105" vertical-scroll-proportion="0.0">
+        <state line="399" column="32" selection-start="8548" selection-end="8548" vertical-scroll-proportion="-9.24">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/megaPlayListXXX.web/templates/html/Layout_Player.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="38" column="38" selection-start="1242" selection-end="1256" vertical-scroll-proportion="-7.45098">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/megaPlayListXXX/resources.background/playlist.global.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="111" column="0" selection-start="3506" selection-end="3506" vertical-scroll-proportion="-20.12">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/megaPlayListXXX.web/scripts/AppBackground.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="91" column="22" selection-start="2326" selection-end="2326" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/megaPlayListXXX.web/scripts/player/Domain.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="338" column="16" selection-start="7272" selection-end="7272" vertical-scroll-proportion="-21.12">
+        <state line="282" column="58" selection-start="6312" selection-end="6312" vertical-scroll-proportion="-13.32">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/megaPlayListXXX.web/scripts/player/UI.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="227" column="26" selection-start="5915" selection-end="5915" vertical-scroll-proportion="0.6332547">
+        <state line="437" column="68" selection-start="12364" selection-end="12364" vertical-scroll-proportion="0.5389151">
           <folding />
         </state>
       </provider>

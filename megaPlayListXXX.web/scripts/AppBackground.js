@@ -61,6 +61,16 @@ define(
 			window.parent.postMessage({action:"MegaPlayListXXX.updateGlobalObject",model:{action:action,model:model}}, '*');
 		}
 
+        function CovertJWPlayerStateToOurState(sState) {
+            var ohStates = {
+                "BUFFERING": "Buffering",
+                "PLAYING": "Playing",
+                "PAUSED": "Paused",
+                "IDLE": "Idle"
+            }
+            return ohStates[sState];
+        }
+
 		function setElements() {
 			$("body").append('<div class="container" id="container"></div>');
 
@@ -73,7 +83,7 @@ define(
 					onReady: function() {
 						// alert("ready");
 					},
-					onPlay: function(e) {  },
+
 					onBufferChange: function(e) {
 						updateGlobalObject("onBufferChange",{bufferPercent:e.bufferPercent})
 					},
@@ -83,8 +93,18 @@ define(
 					onComplete: function(e) {
 						updateGlobalObject("onComplete");
 					},
+
+                    onPlay: function(e) {
+                        updateGlobalObject("onStateChange",{state:"Playing",oldstate:CovertJWPlayerStateToOurState(e.oldstate)});
+                    },
                     onPause: function(e) {
-                        updateGlobalObject("onPause");
+                        updateGlobalObject("onStateChange",{state:"Pause",oldstate:CovertJWPlayerStateToOurState(e.oldstate)});
+                    },
+                    onBuffer: function(e) {
+                        updateGlobalObject("onStateChange",{state:"Buffering",oldstate:CovertJWPlayerStateToOurState(e.oldstate)});
+                    },
+                    onIdle: function(e) {
+                        updateGlobalObject("onStateChange",{state:"Idle",oldstate:CovertJWPlayerStateToOurState(e.oldstate)});
                     }
 				}
 			});

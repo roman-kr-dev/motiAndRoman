@@ -33,6 +33,7 @@ define(['jQuery','Class','Helpers','Template','player/domain'], function($,Class
                 playPauseButton: null,
                 repeatButton: null,
                 shuffleButton: null,
+                status: null,
 
 			// current song info area
 				currentSongThumbnail: null,
@@ -65,7 +66,7 @@ define(['jQuery','Class','Helpers','Template','player/domain'], function($,Class
 						domain.events.add("onTimeUpdate", Domain_TimeUpdate);
 						domain.events.add("onComplete", Domain_SongComplete);
                         domain.events.add("onPlayBarUpdate", Domain_PlayBarUpdate);
-                        domain.events.add("onPause", Domain_SongPause);
+                        domain.events.add("onStateChange", Domain_StateChanged);
                         domain.events.add("onControllerModeChanged", Domain_ControllerModeChanged);
 
 
@@ -195,16 +196,12 @@ define(['jQuery','Class','Helpers','Template','player/domain'], function($,Class
 
 	function Domain_PlayStart(model) {
 
-		var song = model.song;
 
-        if (!model.fromPaused) {
-		    elements.progressFill.css("width","0%");
-		    elements.progressBuffer.css("width","0%");
-        }
+        var song = model.song;
 
-		elements.songsList.find("li.song-item").removeClass("selected").filter(":eq("+model.index+")").addClass("selected");
-		elements.currentSongThumbnail.attr("src", song.thumbnail || config.images.defaultSongCover);
-		elements.currentSongName.html(song.name);
+        elements.songsList.find("li.song-item").removeClass("selected").filter(":eq("+model.index+")").addClass("selected");
+        elements.currentSongThumbnail.attr("src", song.thumbnail || config.images.defaultSongCover);
+        elements.currentSongName.html(song.name);
 
         elements.playPauseButton.removeClass("ico-play").removeClass("disabled").addClass("ico-pause");
 
@@ -269,8 +266,24 @@ define(['jQuery','Class','Helpers','Template','player/domain'], function($,Class
 
 	}
 
-    function Domain_SongPause() {
-        elements.playPauseButton.removeClass("ico-pause").addClass("ico-play");
+    function Domain_StateChanged(state) {
+        elements.status.html("");
+        if (state == "Pause") {
+            elements.playPauseButton.removeClass("ico-pause").addClass("ico-play");
+        } else if (state == "Buffering") {
+            elements.status.html("Buffering...");
+        } else if (state == "Playing") {
+
+
+
+            if (model.oldstate != "Paused") {
+                elements.progressFill.css("width","0%");
+                elements.progressBuffer.css("width","0%");
+            }
+
+
+        }
+
     }
 
 	function Domain_PlayBarUpdate(songs) {
@@ -399,6 +412,37 @@ define(['jQuery','Class','Helpers','Template','player/domain'], function($,Class
             elements.playPauseButton = elements.controllers.find(".ico-play");
             elements.repeatButton = elements.controllers.find(".ico-repeat");
             elements.shuffleButton = elements.controllers.find(".ico-shuffle");
+            elements.status = elements.controllers.find(".status");
+
+            ;(function() { // temp script
+
+                var a = [
+                    '<strong>Moti Zharfati</strong> added a new playlist called "Romania", <span class="link">Add playlist</span>',
+                    '<strong>Roman Krom</strong> added a song called "i love nachum", <span class="link">Add song</span>',
+                    '<strong>Roman Krom</strong> like your song: "Euphoria" and add it!</li>',
+                    '<strong>Liat siman tov</strong> like your song: "BALADA BOA GUSTTAVO LIMA NOVO DVD" and add it!',
+                    '<strong>Roi Sorezki</strong> like your song: "PJ Harvey - Let england shake!" and add it!',
+                    '<strong>Roi Sorezki</strong> added a new playlist called "Battlestar galactica soundtrack", <span class="link">Add playlist</span>',
+                    '<strong>Roman Krom</strong> added a new playlist called "80\'s songs", <span class="link">Add playlist</span>'
+                ];
+
+                var cc = 0;
+                var x = setInterval(function() {
+                    setTimeout(function() {
+                        if (!a.length) return;
+                        var o = a[Math.round(Math.random()*(a.length-1))];
+                        var oEl = $("#lstSocialFeeds").prepend("<li><div class=\"hidden\" style=\"visibility:hidden;\">"+o+"</div></li>").children(":first");
+                        oEl.css("height",oEl.height()).css("display","none").slideDown(300, function() {
+                            oEl.find(".hidden").css("display","none").css("visibility","visible").fadeIn(300);
+                        });
+                    },Math.round(cc++ == 0 ? 20 : Math.random()*5000))
+                },4000)
+
+
+
+            })();
+
+
 
 		// Templates
 			templates = {};
@@ -573,4 +617,4 @@ define(['jQuery','Class','Helpers','Template','player/domain'], function($,Class
 	}
 
 	
-});
+})

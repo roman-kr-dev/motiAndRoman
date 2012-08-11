@@ -106,27 +106,19 @@ MegaPlayListXXX.GlobalObject = (function ($) {
 			}
 
 			
-            var bFromPaused = globalObject.state == "Paused" && oPlayBar.selectedIndex == iSongIndex;
+
 			oPlayBar.selectedIndex = iSongIndex;
 			song = globalObject.PlayBar.songs[iSongIndex];
 
-			
-			
 			if (song.source.type == "youtube")
 			{
 				//alert(song.source.model.href);
-                var sEvent = this;
-                setTimeout(function() {
-				actionsRouter.sendMessageToBackgroundIframe(sEvent,song.source.model.href);
-                },1);
+				actionsRouter.sendMessageToBackgroundIframe(this,song.source.model.href);
 			}
 
-            return {
-                fromPaused: bFromPaused
-            }
 		},
-        "onPause": function() {
-            globalObject.state = "Paused";
+        "onStateChange": function(model) {
+            globalObject.state = model.state;
         },
         "toggleRepeat": function() {
             globalObject.PlayBar.controllersState.playListOptions.repeat = !globalObject.PlayBar.controllersState.playListOptions.repeat;

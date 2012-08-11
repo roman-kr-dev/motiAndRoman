@@ -396,8 +396,32 @@ body {
 				height:100%;
 				width:230px;
 				color:white;
-				text-align:center;
+                background:#000B24;
+                overflow:hidden;
 			}
+
+            .IPlayer .workspace .tab-playlist .socialarea ul {
+                margin:0px;
+                padding:0px;
+                list-style-type:none;
+                margin:0px 5px;
+            }
+
+            .IPlayer .workspace .tab-playlist .socialarea ul li {
+                padding:10px 3px;
+                border-bottom:1px solid #4A4A4A;
+                font-size:11px;
+
+            }
+
+            .IPlayer .workspace .tab-playlist .socialarea ul li span.link {
+                text-decoration:underline;
+                cursor:pointer;
+                color:#B2B9D9;
+                text-align:left;
+            }
+
+
 
 
 
@@ -652,6 +676,14 @@ body {
 						height:9px;
 						background:url(../images/player-bar/controllers/loudspeaker-drag.png) no-repeat;
 					}
+
+            .IPlayer .footer .controllers .status {
+                padding-right:6px;
+                color:white;
+                text-align:right;
+                margin-top:4px;
+                font-size:11px;
+            }
 
 	/* FOOTER - END */
 

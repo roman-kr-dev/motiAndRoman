@@ -268,18 +268,19 @@ define(['jQuery','Class','Helpers'], function($,Class,Helpers) {
 					"onComplete": function() {
 						This.events.fire("onComplete");
 					},
-                    "onPause": function() {
-                        This.events.fire("onPause");
+                    "onStateChange": function(model) {
+                        console.log("Domain -> onStateChange: " + JSON.stringify(model));
+                        This.events.fire("onStateChange",globalObject.state);
                     },
 					"addPlayListToPlayBar": function(model) {
 						This.events.fire("onPlayBarUpdate",model.returnObject);
 						// aaaaaaaaaaa
 					},
 					"play": function(model) {
+
 						This.events.fire("onPlay",{
 							index: globalObject.PlayBar.selectedIndex,
-							song: globalObject.PlayBar.songs[globalObject.PlayBar.selectedIndex],
-                            fromPaused: model.returnObject.fromPaused
+							song: globalObject.PlayBar.songs[globalObject.PlayBar.selectedIndex]
 						});
 					},
                     "toggleRepeat": function() {

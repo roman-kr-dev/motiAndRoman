@@ -21,4 +21,4 @@ appAPI.ready(function($) {
 	var megaPlayListXXX = new MegaPlayListXXX.PlayList();
 
 
-});
+},true);
