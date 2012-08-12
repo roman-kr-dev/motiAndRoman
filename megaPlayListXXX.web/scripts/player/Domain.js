@@ -33,6 +33,10 @@ define(['jQuery','Class','Helpers'], function($,Class,Helpers) {
 				return globalObject.Playlist;
 			},
 
+            getState: function() {
+                return globalObject.state;
+            },
+
             getPlayBar: function() {
                 return globalObject.PlayBar;
             },
@@ -66,6 +70,10 @@ define(['jQuery','Class','Helpers'], function($,Class,Helpers) {
 				});
 				return oSong;
 			},
+
+            seek: function(iPercent) {
+              sendToBackgroundFrame("seek",iPercent);
+            },
 
 			addPlayList: function(sPlayListName,fCallback) {
 

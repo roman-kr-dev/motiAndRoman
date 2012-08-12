@@ -8,8 +8,7 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/megaPlayListXXX.web/scripts/player/UI.js" afterPath="$PROJECT_DIR$/megaPlayListXXX.web/scripts/player/UI.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/megaPlayListXXX.web/templates/css/player.css" afterPath="$PROJECT_DIR$/megaPlayListXXX.web/templates/css/player.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/megaPlayListXXX.web/templates/html/Layout_Player.html" afterPath="$PROJECT_DIR$/megaPlayListXXX.web/templates/html/Layout_Player.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/megaPlayListXXX/extension.js" afterPath="$PROJECT_DIR$/megaPlayListXXX/extension.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/megaPlayListXXX/resources.background/playlist.global.js" afterPath="$PROJECT_DIR$/megaPlayListXXX/resources.background/playlist.global.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/megaPlayListXXX/resources/scripts/playlist.js" afterPath="$PROJECT_DIR$/megaPlayListXXX/resources/scripts/playlist.js" />
     </list>
     <ignored path="megaPlayList.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -34,7 +33,16 @@
       <file leaf-file-name="Layout_Player.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/megaPlayListXXX.web/templates/html/Layout_Player.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="38" column="38" selection-start="1242" selection-end="1256" vertical-scroll-proportion="-7.45098">
+            <state line="56" column="27" selection-start="1816" selection-end="1816" vertical-scroll-proportion="-12.423077">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="extension.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/megaPlayListXXX/extension.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="23" column="6" selection-start="801" selection-end="801" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -43,7 +51,7 @@
       <file leaf-file-name="UI.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/megaPlayListXXX.web/scripts/player/UI.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="437" column="68" selection-start="12364" selection-end="12364" vertical-scroll-proportion="0.5389151">
+            <state line="658" column="0" selection-start="18517" selection-end="18517" vertical-scroll-proportion="0.6792453">
               <folding />
             </state>
           </provider>
@@ -52,7 +60,7 @@
       <file leaf-file-name="Domain.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/megaPlayListXXX.web/scripts/player/Domain.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="282" column="58" selection-start="6312" selection-end="6312" vertical-scroll-proportion="-13.32">
+            <state line="74" column="41" selection-start="1544" selection-end="1548" vertical-scroll-proportion="-16.68">
               <folding />
             </state>
           </provider>
@@ -61,7 +69,7 @@
       <file leaf-file-name="AppBackground.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/megaPlayListXXX.web/scripts/AppBackground.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="91" column="22" selection-start="2326" selection-end="2326" vertical-scroll-proportion="0.0">
+            <state line="39" column="43" selection-start="664" selection-end="665" vertical-scroll-proportion="-13.96">
               <folding />
             </state>
           </provider>
@@ -70,7 +78,7 @@
       <file leaf-file-name="playlist.global.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/megaPlayListXXX/resources.background/playlist.global.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="111" column="0" selection-start="3506" selection-end="3506" vertical-scroll-proportion="-20.12">
+            <state line="111" column="0" selection-start="3506" selection-end="3506" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -79,7 +87,7 @@
       <file leaf-file-name="player.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/megaPlayListXXX.web/templates/css/player.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="399" column="32" selection-start="8548" selection-end="8548" vertical-scroll-proportion="-9.24">
+            <state line="442" column="23" selection-start="9414" selection-end="9414" vertical-scroll-proportion="5.68">
               <folding />
             </state>
           </provider>
@@ -100,19 +108,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/megaPlayListXXX.web/scripts/AppBackground.js" />
         <option value="$PROJECT_DIR$/megaPlayListXXX/extension.js" />
         <option value="$PROJECT_DIR$/megaPlayListXXX/resources.background/playlist.global.js" />
-        <option value="$PROJECT_DIR$/megaPlayListXXX.web/scripts/player/Domain.js" />
-        <option value="$PROJECT_DIR$/megaPlayListXXX.web/templates/html/Layout_Player.html" />
         <option value="$PROJECT_DIR$/megaPlayListXXX.web/templates/css/player.css" />
+        <option value="$PROJECT_DIR$/megaPlayListXXX.web/templates/html/Layout_Player.html" />
+        <option value="$PROJECT_DIR$/megaPlayListXXX.web/scripts/libs/jquery.ui/jquery-ui.js" />
+        <option value="$PROJECT_DIR$/megaPlayListXXX/resources/scripts/playlist.js" />
+        <option value="$PROJECT_DIR$/megaPlayListXXX.web/scripts/player/Domain.js" />
+        <option value="$PROJECT_DIR$/megaPlayListXXX.web/scripts/AppBackground.js" />
         <option value="$PROJECT_DIR$/megaPlayListXXX.web/scripts/player/UI.js" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
-    <option name="width" value="1932" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
     <option name="height" value="1056" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
@@ -186,7 +197,41 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="megaPlayListXXX" />
+              <option name="myItemId" value="megaPlayListXXX.web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="libs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="megaPlayList" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="megaPlayList" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="megaPlayListXXX.web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="libs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="jquery.ui" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -201,10 +246,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="megaPlayListXXX" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources.background" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -253,13 +294,13 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="0" width="1932" height="1056" extended-state="0" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="false" />
     <layout>
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32962137" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.13048072" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.13020559" sideWeight="0.6703786" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -327,11 +368,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/megaPlayListXXX.web/templates/images/icons/close.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/megaPlayListXXX.web/templates/images/icons/settings.png">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -347,14 +383,11 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/megaPlayListXXX/background.js">
+    <entry file="file://$PROJECT_DIR$/megaPlayListXXX.web/scripts/libs/jquery.ui/jquery-ui.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/megaPlayListXXX/resources.background/playlist.background.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+        <state line="4" column="33" selection-start="193" selection-end="193" vertical-scroll-proportion="0.019767443">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/megaPlayListXXX/resources.background/playlist.router.js">
@@ -362,51 +395,77 @@
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/megaPlayListXXX/extension.js">
+    <entry file="file://$PROJECT_DIR$/megaPlayListXXX/background.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="6" selection-start="801" selection-end="801" vertical-scroll-proportion="0.44788086">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/megaPlayListXXX/resources.background/playlist.config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/megaPlayListXXX.web/templates/css/player.css">
+    <entry file="file://$PROJECT_DIR$/megaPlayListXXX/resources.background/playlist.background.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="399" column="32" selection-start="8548" selection-end="8548" vertical-scroll-proportion="-9.24">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.03207331">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/megaPlayListXXX/resources/scripts/playlist.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="35" column="47" selection-start="966" selection-end="966" vertical-scroll-proportion="0.68155783">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/megaPlayListXXX/extension.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="6" selection-start="801" selection-end="801" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/megaPlayListXXX.web/templates/html/Layout_Player.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="38" selection-start="1242" selection-end="1256" vertical-scroll-proportion="-7.45098">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/megaPlayListXXX/resources.background/playlist.global.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="111" column="0" selection-start="3506" selection-end="3506" vertical-scroll-proportion="-20.12">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/megaPlayListXXX.web/scripts/AppBackground.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="91" column="22" selection-start="2326" selection-end="2326" vertical-scroll-proportion="0.0">
+        <state line="56" column="27" selection-start="1816" selection-end="1816" vertical-scroll-proportion="-12.423077">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/megaPlayListXXX.web/scripts/player/Domain.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="282" column="58" selection-start="6312" selection-end="6312" vertical-scroll-proportion="-13.32">
+        <state line="74" column="41" selection-start="1544" selection-end="1548" vertical-scroll-proportion="-16.68">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/megaPlayListXXX.web/templates/css/player.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="442" column="23" selection-start="9414" selection-end="9414" vertical-scroll-proportion="5.68">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/megaPlayListXXX/resources.background/playlist.global.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="111" column="0" selection-start="3506" selection-end="3506" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/megaPlayListXXX.web/scripts/AppBackground.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="39" column="43" selection-start="664" selection-end="665" vertical-scroll-proportion="-13.96">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/megaPlayListXXX.web/scripts/player/UI.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="437" column="68" selection-start="12364" selection-end="12364" vertical-scroll-proportion="0.5389151">
+        <state line="658" column="0" selection-start="18517" selection-end="18517" vertical-scroll-proportion="0.6792453">
           <folding />
         </state>
       </provider>

@@ -43,10 +43,11 @@ define(
                     elements.player.load({file: src});
                     elements.player.play(true);
                 }
+    		},
 
-
-
-			}
+            seek: function(iPercent) {
+                elements.player.seek(Math.round(iPercent * elements.player.getPlaylist()[0].duration / 100));
+            }
 		});
 
 		function sendMessage(action, model) {

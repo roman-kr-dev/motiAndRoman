@@ -3,7 +3,7 @@
 	Events:
 		onReady
 */
-define(['jQuery','Class','Helpers','Template','player/domain'], function($,Class,Helpers,Template,Domain) {
+define(['jQuery','Class','Helpers','Template','player/domain','libs/jquery.ui/jquery-ui'], function($,Class,Helpers,Template,Domain) {
 
 	var This, // hold the context of current class
 		domain, // hold reference to MegaPlayer.Domain class
@@ -25,8 +25,15 @@ define(['jQuery','Class','Helpers','Template','player/domain'], function($,Class
 				songsList: null, // reference to play bar container
 
 			// progress area
+
+                progressBar: null,
 				progressFill: null,
 				progressBuffer: null,
+
+
+                progressCursor_timeout: null,
+                progressCursor: null,
+                progressCursorInDrag: false,
 
 			// controller area
                 controllers: null,
@@ -201,7 +208,7 @@ define(['jQuery','Class','Helpers','Template','player/domain'], function($,Class
 
         elements.songsList.find("li.song-item").removeClass("selected").filter(":eq("+model.index+")").addClass("selected");
         elements.currentSongThumbnail.attr("src", song.thumbnail || config.images.defaultSongCover);
-        elements.currentSongName.html(song.name);
+        elements.currentSongName.css("display","none").html(song.name).fadeIn(350);
 
         elements.playPauseButton.removeClass("ico-play").removeClass("disabled").addClass("ico-pause");
 
@@ -233,10 +240,17 @@ define(['jQuery','Class','Helpers','Template','player/domain'], function($,Class
 		elements.progressBuffer.css("width",bufferPercent + "%");
 	}
 
+    function UpdateFill(iPercent) {
+
+        elements.progressFill.css("width",iPercent + "%");
+        if (!elements.progressCursorInDrag) {
+            elements.progressCursor.css("left",(elements.progressFill.width() - 8) + "px");
+        }
+    }
 
 	function Domain_TimeUpdate(info) {
 
-		elements.progressFill.css("width",Math.min((info.position/(info.duration-1)*100),100) + "%");
+		UpdateFill(Math.min((info.position/(info.duration-1)*100),100));
 
 		var totalSec = Math.floor(info.position);
 
@@ -275,11 +289,11 @@ define(['jQuery','Class','Helpers','Template','player/domain'], function($,Class
         } else if (state == "Playing") {
 
 
-
+            /*
             if (model.oldstate != "Paused") {
-                elements.progressFill.css("width","0%");
+                UpdateFill(0);
                 elements.progressBuffer.css("width","0%");
-            }
+            }*/
 
 
         }
@@ -385,8 +399,10 @@ define(['jQuery','Class','Helpers','Template','player/domain'], function($,Class
 			elements.songsList = $("#songslist-thelist");
 
 		// Progress area
+            elements.progressBar = $("#ProgressBar");
 			elements.progressFill = $("#ProgressFill");
 			elements.progressBuffer = $("#ProgressBuffer");
+            elements.progressCursor = $("#fill-pointer");
 
 		// Current song area
 			elements.currentSongThumbnail = $("#CurrentSongInfo .song-thumbnail");
@@ -437,8 +453,6 @@ define(['jQuery','Class','Helpers','Template','player/domain'], function($,Class
                         });
                     },Math.round(cc++ == 0 ? 20 : Math.random()*5000))
                 },4000)
-
-
 
             })();
 
@@ -612,6 +626,61 @@ define(['jQuery','Class','Helpers','Template','player/domain'], function($,Class
 
             elements.shuffleButton.bind("click",function(){
                 domain.toggleShuffle();
+            });
+
+        // Events of progress bar
+
+            elements.progressBar.hover(
+                function(){
+                    try {clearTimeout(elements.progressCursor_timeout);}
+                    catch(e){}
+                    if ($.inArray(domain.getState(),"Playing,Pause,Buffering".split(",")) > -1) {
+                        elements.progressCursor.css("display","block");
+                    }
+                },
+                function() {
+                    try {clearTimeout(elements.progressCursor_timeout);}
+                    catch(e){}
+                    if (!elements.progressCursorInDrag) {
+                        elements.progressCursor_timeout = setTimeout(function(){
+                            elements.progressCursor.fadeOut(2500);
+                        },2000)
+                    }
+                    // elements.progressCursor_interval
+                }
+            ).bind("click", function(e) {
+                if ($.inArray(domain.getState(),"Playing,Pause,Buffering".split(",")) > -1) {
+                    var iMax = 917;
+                    var iOffset = 3;
+                    domain.seek((e.clientX - iOffset) / iMax * 100);
+                }
+            });
+
+            elements.progressCursor.draggable({
+                // [0,elements.progressCursor.offsetTop(),400,elements.progressCursor.offsetTop()]
+                containment: [0,null,elements.progressBar.width(),null],
+                axis: "x",
+                iframeFix: true,
+                drag: function() {
+
+                },
+                start: function() {
+                    elements.progressCursorInDrag = true;
+                    try {clearTimeout(elements.progressCursor_timeout);}
+                    catch(e){}
+                },
+                stop: function(e) {
+
+                    elements.progressCursorInDrag = false;
+                    var iMax = 917;
+                    var iOffset = 3;
+                    domain.seek((e.clientX - iOffset) / iMax * 100);
+                    try {clearTimeout(elements.progressCursor_timeout);}
+                    catch(e){}
+                    elements.progressCursor_timeout = setTimeout(function(){
+                        elements.progressCursor.fadeOut(2500);
+                    },2000);
+                }
             });
 
 	}

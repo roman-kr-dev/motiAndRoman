@@ -441,7 +441,6 @@ body {
 			margin:0px 10px;
 			position:relative;
 			height:7px;
-			overflow:hidden;
 		}
 
 			.IPlayer .footer .progress-bar div {
@@ -484,6 +483,18 @@ body {
 				width:0%;
 				background:url(../images/player-bar/progress/fill.gif);
 			}
+
+            .IPlayer .footer .progress-bar .fill-pointer {
+                position: absolute;
+                top:-8px;
+                left:-8px;
+                z-index: 10;
+                width:22px;
+                height:22px;
+                background: url(../images/player-bar/progress/cursor.png);
+                cursor:pointer;
+                display:none;
+            }
 
 
 			.IPlayer .footer .progress-bar .buffer-container {
