@@ -19,7 +19,7 @@
 			remove:function (name, fn) {
 				var arr = [];
 
-				$.each(this.eventListeners, function (i, evt) {
+				jQuery.each(this.eventListeners, function (i, evt) {
 					if (!(evt.e == name && evt.fn == fn)) arr.push(evt);
 				});
 
@@ -27,7 +27,7 @@
 			},
 
 			fire:function (name, cfg, binder) {
-				$.each(this.eventListeners, function (i, evt) {
+				jQuery.each(this.eventListeners, function (i, evt) {
 					if (evt.e == name) evt.fn.call(binder || this, cfg);
 				});
 			},

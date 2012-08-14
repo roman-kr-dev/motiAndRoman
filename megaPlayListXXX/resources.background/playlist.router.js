@@ -6,43 +6,53 @@ MegaPlayListXXX.ActionsRouter = (function ($) {
 	var actions = {
 
 		// core methods
-		"player.sendToIframe": function(model) {
+		'player.sendToIframe': function(model) {
 			sendMessageToIframe(model.action,model.model);
 		},
-		"sendToBackgroundFrame": function(model) {
+		'sendToBackgroundFrame': function(model) {
 			sendMessageToBackgroundIframe(model.action,model.model);
 		},
-		"getGlobalObject": function() { // load the global object, we call this function from the Domain
-			if (!globalObject.getObject().hasLoaded)
+		'getGlobalObject': function() { // load the global object, we call this function from the Domain
+			if (!globalObject.getObject().hasLoaded) {
 				globalObject.getPlayListFromDB(function() { sendMessageToIframe("Background.getGlobalObjectCallback", globalObject.getObject()); });
-			else
-				sendMessageToIframe("Background.getGlobalObjectCallback",globalObject.getObject());
+			}
+			else {
+				sendMessageToIframe("Background.getGlobalObjectCallback", globalObject.getObject());
+			}
 		},
-		"updateGlobalObject": function(model) {
+		'updateGlobalObject': function(model) {
 			//alert(model.action);
 			globalObject.updateObject(model.action,model.model);
 		},
-		"player.init": function(e) {
+		'player.init': function(e) {
 			playerIframeWin = e.source;
 		},
 
 		// action methods
-		"show/hide": function() {
+		'show/hide': function() {
 			sendMessageToExtension("show/hide");
 		},
 
-		"play": function(song) {
+		'play': function(song) {
 
 			if (song.source.type == "youtube")
 			{
 				//alert(song.source.model.href);
 				sendMessageToBackgroundIframe(this,song.source.model.href);
 			}
+		},
+
+		//database methods
+		'database.saveSong':function (model) {
+			this.events.fire('updateDatabase', {
+				action:'saveSong',
+				model:model
+			});
 		}
 	}
 
 	function sendMessageToBackgroundIframe(action,model) {
-		playerIframeWin.postMessage({action:config.baseEvent + action,model:model}, '*');
+		playerIframeWin.postMessage({action:config.baseEvent + action ,model:model}, '*');
 	}
 
 	return Class.extend({
@@ -53,7 +63,7 @@ MegaPlayListXXX.ActionsRouter = (function ($) {
 			});
 		},
 		route:function (action, model) {
-			!actions[action] || actions[action].call(action,model);
+			!actions[action] || actions[action].call(this ,model);
 		},
 		sendMessageToBackgroundIframe: function(action,model) {
 			sendMessageToBackgroundIframe(action,model);

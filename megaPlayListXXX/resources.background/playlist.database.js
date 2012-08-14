@@ -7,8 +7,13 @@ MegaPlayListXXX.DataBase = (function ($) {
 			initDefaultData();
 		},
 
-		saveSong:function (songData, playListId) {
-			var playListId = playListId !== undefined ? playListId : 0,
+		exec:function (action, model) {
+			this[action](model);
+		},
+
+		saveSong:function (model) {
+			var songData = model.model,
+				playListId = songData.playListId !== undefined ? songData.playListId : 0,
 				playlistSongs = appAPI.db.get('playListSongs');
 
 			playlistSongs[songData.videoId] = $.extend(songData, {playListId:playListId});

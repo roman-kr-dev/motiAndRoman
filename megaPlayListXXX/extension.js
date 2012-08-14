@@ -8,7 +8,6 @@ appAPI.ready(function($) {
 
 	appAPI.resources.includeJS("scripts/playlist.config.js");
 	appAPI.resources.includeJS("scripts/playlist.router.js");
-	appAPI.resources.includeJS("scripts/playlist.database.js");
 	appAPI.resources.includeJS("scripts/playlist.js");
 
 	appAPI.resources.includeJS("scripts/song.managers/manager.js");
@@ -21,4 +20,4 @@ appAPI.ready(function($) {
 	var megaPlayListXXX = new MegaPlayListXXX.PlayList();
 
 
-},true);
+}, false);

@@ -1,12 +1,12 @@
 MegaPlayListXXX.PlayListBackground = (function ($) {
 	var config = MegaPlayListXXX.Config.Background,
-		playerIframe, actionsRouter
+		playerIframe, actionsRouter, database;
 
 	return Class.extend({
 		init:function () {
-
 			//appAPI.chrome.browserAction.setIcon(1);
 			
+			dataBase = new MegaPlayListXXX.DataBase();
 			actionsRouter = new MegaPlayListXXX.ActionsRouter();
 			
 			initPlayerIframe();
@@ -15,23 +15,24 @@ MegaPlayListXXX.PlayListBackground = (function ($) {
 	});
 
 	function initEvents() {
-
+		actionsRouter.events.add('updateDatabase', function (model) {
+			dataBase.exec(model.action, model);
+		});
+		
 		appAPI.message.addListener(function(msg) {
-			actionsRouter.route(msg.action,msg.model);
+			actionsRouter.route(msg.action, msg.model);
 		});
 
 		window.addEventListener('message', function(e){
-	
 			if (config.messageRegExp.test(e.data.action)) {
 				var action = RegExp.$1;
-				actionsRouter.route(action, action != "player.init" ? e.data.model : e);
+				actionsRouter.route(action, action != 'player.init' ? e.data.model : e);
 			}
 		}, false);
 
 		appAPI.browserAction.onClick(function() {
-			actionsRouter.route("show/hide");
+			actionsRouter.route('show/hide');
 		});
-
 
 		setInterval(function() {
 			// todo: check if the ActiveTabID has changed, if yes, then send onReady event
