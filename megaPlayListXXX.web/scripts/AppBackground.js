@@ -34,7 +34,11 @@ define(
 
 			// actions
 
-			play: function(src) {
+			play: function(song) {
+
+				var src;
+				if (song.source.type == "youtube")
+					src = song.source.model.href;
 
                 var oPlayList = elements.player.getPlaylist()[0];
                 if (elements.player.getState() == "PAUSED" && oPlayList.file == src) {

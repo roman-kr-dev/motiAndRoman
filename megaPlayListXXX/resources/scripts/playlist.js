@@ -1,12 +1,12 @@
 MegaPlayListXXX.PlayList = (function ($) {
 	var baseCSS = MegaPlayListXXX.Config.baseCSS,
 		config = MegaPlayListXXX.Config.PlayList,
-		songManager, actionsRouter, playerIframe;
+		songManager, extensionActionsRouter, playerIframe;
 
 	return Class.extend({
 		init:function () {
 			songManager = new MegaPlayListXXX.SongManager.Manager();
-			actionsRouter = new MegaPlayListXXX.ActionsRouter();
+			extensionActionsRouter = new MegaPlayListXXX.ExtensionActionsRouter();
 
 			initEvents();
 			initPlaylistIframe();
@@ -14,11 +14,9 @@ MegaPlayListXXX.PlayList = (function ($) {
 	});
 
 	function initEvents() {
+
 		songManager.events.add('saveSong', function (song) {
-			route('Domain.sendToBackground', {
-				action:'database.saveSong',
-				model:song
-			});
+			sendToBackground('database.saveSong',song);
 		});
 		
 		window.addEventListener('message', function(e){
@@ -32,12 +30,36 @@ MegaPlayListXXX.PlayList = (function ($) {
 		});
 	}
 
-	function route(action, model) {
-		actionsRouter.route(action, model);
+	function initPlaylistIframe() {
+		playerIframe = $('<iframe scrolling="no" frameborder="no" id="' + config.iframePlayerId + '" src="' + config.iframePlayerUrl + '" class="' + baseCSS + 'player-iframe' + '" />').appendTo('body');
+		extensionActionsRouter.setPlayetIframe(playerIframe);
 	}
 
-	function initPlaylistIframe() {
-		//playerIframe = $('<iframe scrolling="no" frameborder="no" id="' + config.iframePlayerId + '" src="' + config.iframePlayerUrl + '" class="' + baseCSS + 'player-iframe' + '" />').appendTo('body');
-		//actionsRouter.setPlayetIframe(playerIframe);
+	// core methods
+	function sendToBackground(action, model) {
+		route('Domain.sendToBackground', {
+			action:action,
+			model:model
+		});
 	}
+
+	function sendToBackgroundFrame(action, model) {
+		route('Domain.sendToBackgroundFrame', {
+			action:action,
+			model:model
+		});
+	}
+
+	function sendToIframe(action,model) {
+		route('sendToIframe', {
+			action:action,
+			model:model
+		});
+	}
+
+	function route(action, model) {
+		extensionActionsRouter.route(action, model);
+	}
+
+
 })(jQuery);

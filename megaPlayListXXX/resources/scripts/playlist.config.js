@@ -30,6 +30,7 @@ MegaPlayListXXX.Config = {
 		}
 	},
 
-	ActionsRouter:{
+	extensionActionsRouter: {
+
 	}
 };

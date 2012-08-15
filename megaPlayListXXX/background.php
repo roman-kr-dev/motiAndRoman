@@ -25,19 +25,14 @@ echo $file;
 
 echo "\n\n\n\n";
 
-//router
-$file = file_get_contents('resources.background/playlist.router.js', true);
-echo $file;
-
-echo "\n\n\n\n";
-
 //global object
 $file = file_get_contents('resources.background/playlist.global.js', true);
 echo $file;
 
 echo "\n\n\n\n";
 
-//playlist background
+//background
 $file = file_get_contents('resources.background/playlist.background.js', true);
 echo $file;
+
 ?>

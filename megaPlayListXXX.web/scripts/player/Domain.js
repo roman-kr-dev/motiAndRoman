@@ -382,8 +382,6 @@ define(['jQuery','Class','Helpers'], function($,Class,Helpers) {
 							sAction = sAction.substring(sAction.split(".")[0].length+1,sAction.length);
 						}
 
-						
-
 						!oFunc[sAction] || oFunc[sAction].call(sAction,e.data.model);
 					}
 				}, false);

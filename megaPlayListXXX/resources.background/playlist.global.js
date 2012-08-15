@@ -1,7 +1,6 @@
 // manage the globalObject (the global object store everything about the state of the player)
 MegaPlayListXXX.GlobalObject = (function ($) {
 	var This,
-		actionsRouter,
 		globalObject = {
 			hasLoaded: false, // used to check if we need to sync or return the object
             state: "Idle", // Idle,Paused,Playing,Buffering
@@ -110,11 +109,7 @@ MegaPlayListXXX.GlobalObject = (function ($) {
 			oPlayBar.selectedIndex = iSongIndex;
 			song = globalObject.PlayBar.songs[iSongIndex];
 
-			if (song.source.type == "youtube")
-			{
-				//alert(song.source.model.href);
-				actionsRouter.sendMessageToBackgroundIframe(this,song.source.model.href);
-			}
+			This.events.fire('playSong', song);
 
 		},
         "onStateChange": function(model) {
@@ -131,7 +126,7 @@ MegaPlayListXXX.GlobalObject = (function ($) {
 	return Class.extend({
 		init: function(options) {
 			This = this;
-			actionsRouter = options.actionsRouter;
+			
 		},
 		getObject: function() {
 			return globalObject;

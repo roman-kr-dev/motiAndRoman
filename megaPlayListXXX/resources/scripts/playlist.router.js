@@ -1,7 +1,7 @@
-MegaPlayListXXX.ActionsRouter = (function ($) {
+MegaPlayListXXX.ExtensionActionsRouter = (function ($) {
 	var This,
 		baseCSS = MegaPlayListXXX.Config.baseCSS,
-		config = MegaPlayListXXX.Config.ActionsRouter,
+		config = MegaPlayListXXX.Config.extensionActionsRouter,
 		playerIframe;
 
 	var actions = {
@@ -23,13 +23,9 @@ MegaPlayListXXX.ActionsRouter = (function ($) {
 		},
 
 		// action methods
-		'play': function(song) {		
-			postToBackground(this,song);
-		},
 		'show/hide': function() {
 			var bShow = $(playerIframe).is(':visible');
 			$(playerIframe)[bShow ? 'hide' : 'show']();
-
 			updateGlobalObject(this, {bShow:bShow});
 		}
 	};
