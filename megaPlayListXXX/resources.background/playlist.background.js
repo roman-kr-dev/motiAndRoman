@@ -16,7 +16,11 @@ MegaPlayListXXX.PlayListBackground = (function ($) {
 		},
 		'getGlobalObject': function() { // load the global object, we call this function from the Domain
 			if (!globalObject.getObject().hasLoaded) {
-				globalObject.getPlayListFromDB(function() { sendMessageToIframe("Background.getGlobalObjectCallback", globalObject.getObject()); });
+				dataBase.getPlaylistData(function (data) {
+					globalObject.setPlaylistData(data);
+
+					sendMessageToIframe('Background.getGlobalObjectCallback', globalObject.getObject());
+				});
 			}
 			else {
 				sendMessageToIframe("Background.getGlobalObjectCallback", globalObject.getObject());
@@ -44,7 +48,7 @@ MegaPlayListXXX.PlayListBackground = (function ($) {
 		//database methods
 		'database': {
 			'saveSong': function (model) {
-				dataBase.exec(this, model);
+				dataBase.saveSong(model);
 			}
 		}
 	}
@@ -68,11 +72,10 @@ MegaPlayListXXX.PlayListBackground = (function ($) {
 			var oFunc = actions;
 			var sAction = action;
 			
-			while (sAction.indexOf(".") > -1)
-			{
-				
-				oFunc = oFunc[sAction.split(".")[0]];
-				sAction = sAction.substring(sAction.split(".")[0].length+1,sAction.length);
+			while (sAction.indexOf('.') > -1)
+			{	
+				oFunc = oFunc[sAction.split('.')[0]];
+				sAction = sAction.substring(sAction.split(".")[0].length+1, sAction.length);
 			}
 
 			!oFunc[sAction] || oFunc[sAction].call(sAction, model);
@@ -88,7 +91,6 @@ MegaPlayListXXX.PlayListBackground = (function ($) {
 	function initEvents() {
 
 		// Global Object Evnents
-	
 		globalObject.events.add('playSong', function(song) {
 			sendMessageToBackgroundIframe("play",song);
 		});

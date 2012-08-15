@@ -7,13 +7,15 @@ MegaPlayListXXX.DataBase = (function ($) {
 			initDefaultData();
 		},
 
-		exec:function (action, model) {
-			this[action](model);
+		getPlaylistData:function (callback) {
+			callback({
+				playListData:appAPI.db.get('playListData'),
+				playListSongs:appAPI.db.get('playListSongs')
+			});
 		},
 
-		saveSong:function (model) {
-			var songData = model.model,
-				playListId = songData.playListId !== undefined ? songData.playListId : 0,
+		saveSong:function (songData) {
+			var playListId = songData.playListId !== undefined ? songData.playListId : 0,
 				playlistSongs = appAPI.db.get('playListSongs');
 
 			playlistSongs[songData.videoId] = $.extend(songData, {playListId:playListId});

@@ -3,7 +3,7 @@ MegaPlayListXXX.GlobalObject = (function ($) {
 	var This,
 		globalObject = {
 			hasLoaded: false, // used to check if we need to sync or return the object
-            state: "Idle", // Idle,Paused,Playing,Buffering
+            state:'Idle', // Idle,Paused,Playing,Buffering
 			windowIsOpen: false, // used to check if the player window is open or close
 			Playlist: {}, // getPlayListFromDB()
 			PlayBar: {
@@ -31,26 +31,26 @@ MegaPlayListXXX.GlobalObject = (function ($) {
 		};
 
 	var actions = {
-		"show/hide": function(model) {
+		'show/hide': function(model) {
 			globalObject.windowIsOpen = model.bShow;
 		},
-		"onBufferChange": function(bufferPercent) {
+		'onBufferChange': function(bufferPercent) {
 			globalObject.PlayBar.controllersState.progress.bufferPercent = bufferPercent;
 		},
-		"onTimeUpdate": function(info) {
+		'onTimeUpdate': function(info) {
 			globalObject.PlayBar.controllersState.progress.duration = info.duration;
 			globalObject.PlayBar.controllersState.progress.position = info.position;
 		},
-		"onComplete": function() {
+		'onComplete': function() {
 			globalObject.PlayBar.controllersState.progress.position = globalObject.PlayBar.controllersState.progress.duration;
 		},
-		"addPlayListToPlayBar": function(model) {
+		'addPlayListToPlayBar': function(model) {
 			var oPlayList = This.getPlayListById(model.iPlayListId);
 			var aSongsToAdd = oPlayList.songs;
 			globalObject.PlayBar.songs = globalObject.PlayBar.songs.concat(aSongsToAdd);
 			return aSongsToAdd; 
 		},
-		"play": function(options) {
+		'play': function(options) {
 
 			var settings = {
 				index: null, // int, play song by index
@@ -67,7 +67,7 @@ MegaPlayListXXX.GlobalObject = (function ($) {
 
 			updateVars();
 
-			if ($.type(settings.index) == "number")
+			if ($.type(settings.index) == 'number')
 			{
 				iSongIndex = settings.index;
 			} else if (settings.next)
@@ -112,13 +112,13 @@ MegaPlayListXXX.GlobalObject = (function ($) {
 			This.events.fire('playSong', song);
 
 		},
-        "onStateChange": function(model) {
+        'onStateChange': function(model) {
             globalObject.state = model.state;
         },
-        "toggleRepeat": function() {
+        'toggleRepeat': function() {
             globalObject.PlayBar.controllersState.playListOptions.repeat = !globalObject.PlayBar.controllersState.playListOptions.repeat;
         },
-        "toggleShuffle": function() {
+        'toggleShuffle': function() {
             globalObject.PlayBar.controllersState.playListOptions.shuffle = !globalObject.PlayBar.controllersState.playListOptions.shuffle;
         }
 	};
@@ -144,6 +144,13 @@ MegaPlayListXXX.GlobalObject = (function ($) {
 			sendMessageToIframe('Background.onUpdate', globalObject);
 			sendMessageToIframe('Background.globalObjectUpdate.' + action, model);
 
+		},
+		setPlaylistData:function (data) {
+			globalObject.hasLoaded = true;
+			globalObject.playListData = data.playListData;
+			globalObject.playListSongs = data.playListSongs;
+
+			console.log('data', data.playListData, data.playListSongs);
 		},
 		getPlayListFromDB: function(fCallback) {
 			setTimeout(function() {
